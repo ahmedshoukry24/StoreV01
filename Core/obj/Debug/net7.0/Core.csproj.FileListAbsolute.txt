@@ -1,0 +1,24 @@
+E:\Ahmed\Projects\20240519 - may\Store - V01\Core\bin\Debug\net7.0\Core.deps.json
+E:\Ahmed\Projects\20240519 - may\Store - V01\Core\bin\Debug\net7.0\Core.dll
+E:\Ahmed\Projects\20240519 - may\Store - V01\Core\bin\Debug\net7.0\Core.pdb
+E:\Ahmed\Projects\20240519 - may\Store - V01\Core\obj\Debug\net7.0\Core.csproj.AssemblyReference.cache
+E:\Ahmed\Projects\20240519 - may\Store - V01\Core\obj\Debug\net7.0\Core.GeneratedMSBuildEditorConfig.editorconfig
+E:\Ahmed\Projects\20240519 - may\Store - V01\Core\obj\Debug\net7.0\Core.AssemblyInfoInputs.cache
+E:\Ahmed\Projects\20240519 - may\Store - V01\Core\obj\Debug\net7.0\Core.AssemblyInfo.cs
+E:\Ahmed\Projects\20240519 - may\Store - V01\Core\obj\Debug\net7.0\Core.csproj.CoreCompileInputs.cache
+E:\Ahmed\Projects\20240519 - may\Store - V01\Core\obj\Debug\net7.0\Core.dll
+E:\Ahmed\Projects\20240519 - may\Store - V01\Core\obj\Debug\net7.0\refint\Core.dll
+E:\Ahmed\Projects\20240519 - may\Store - V01\Core\obj\Debug\net7.0\Core.pdb
+E:\Ahmed\Projects\20240519 - may\Store - V01\Core\obj\Debug\net7.0\ref\Core.dll
+E:\Ahmed\Projects\STORE\20240603-may-store\StoreV01\Core\bin\Debug\net7.0\Core.deps.json
+E:\Ahmed\Projects\STORE\20240603-may-store\StoreV01\Core\bin\Debug\net7.0\Core.dll
+E:\Ahmed\Projects\STORE\20240603-may-store\StoreV01\Core\bin\Debug\net7.0\Core.pdb
+E:\Ahmed\Projects\STORE\20240603-may-store\StoreV01\Core\obj\Debug\net7.0\Core.csproj.AssemblyReference.cache
+E:\Ahmed\Projects\STORE\20240603-may-store\StoreV01\Core\obj\Debug\net7.0\Core.GeneratedMSBuildEditorConfig.editorconfig
+E:\Ahmed\Projects\STORE\20240603-may-store\StoreV01\Core\obj\Debug\net7.0\Core.AssemblyInfoInputs.cache
+E:\Ahmed\Projects\STORE\20240603-may-store\StoreV01\Core\obj\Debug\net7.0\Core.AssemblyInfo.cs
+E:\Ahmed\Projects\STORE\20240603-may-store\StoreV01\Core\obj\Debug\net7.0\Core.csproj.CoreCompileInputs.cache
+E:\Ahmed\Projects\STORE\20240603-may-store\StoreV01\Core\obj\Debug\net7.0\Core.dll
+E:\Ahmed\Projects\STORE\20240603-may-store\StoreV01\Core\obj\Debug\net7.0\refint\Core.dll
+E:\Ahmed\Projects\STORE\20240603-may-store\StoreV01\Core\obj\Debug\net7.0\Core.pdb
+E:\Ahmed\Projects\STORE\20240603-may-store\StoreV01\Core\obj\Debug\net7.0\ref\Core.dll

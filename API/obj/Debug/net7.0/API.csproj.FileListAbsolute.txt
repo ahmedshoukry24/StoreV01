@@ -1,0 +1,176 @@
+E:\Ahmed\Projects\20240519 - may\Store - V01\API\bin\Debug\net7.0\appsettings.Development.json
+E:\Ahmed\Projects\20240519 - may\Store - V01\API\bin\Debug\net7.0\appsettings.json
+E:\Ahmed\Projects\20240519 - may\Store - V01\API\bin\Debug\net7.0\API.exe
+E:\Ahmed\Projects\20240519 - may\Store - V01\API\bin\Debug\net7.0\API.deps.json
+E:\Ahmed\Projects\20240519 - may\Store - V01\API\bin\Debug\net7.0\API.runtimeconfig.json
+E:\Ahmed\Projects\20240519 - may\Store - V01\API\bin\Debug\net7.0\API.dll
+E:\Ahmed\Projects\20240519 - may\Store - V01\API\bin\Debug\net7.0\API.pdb
+E:\Ahmed\Projects\20240519 - may\Store - V01\API\bin\Debug\net7.0\Microsoft.AspNetCore.OpenApi.dll
+E:\Ahmed\Projects\20240519 - may\Store - V01\API\bin\Debug\net7.0\Microsoft.OpenApi.dll
+E:\Ahmed\Projects\20240519 - may\Store - V01\API\bin\Debug\net7.0\Swashbuckle.AspNetCore.Swagger.dll
+E:\Ahmed\Projects\20240519 - may\Store - V01\API\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+E:\Ahmed\Projects\20240519 - may\Store - V01\API\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+E:\Ahmed\Projects\20240519 - may\Store - V01\API\bin\Debug\net7.0\Core.dll
+E:\Ahmed\Projects\20240519 - may\Store - V01\API\bin\Debug\net7.0\Infrastructure.dll
+E:\Ahmed\Projects\20240519 - may\Store - V01\API\bin\Debug\net7.0\Infrastructure.pdb
+E:\Ahmed\Projects\20240519 - may\Store - V01\API\bin\Debug\net7.0\Core.pdb
+E:\Ahmed\Projects\20240519 - may\Store - V01\API\obj\Debug\net7.0\API.csproj.AssemblyReference.cache
+E:\Ahmed\Projects\20240519 - may\Store - V01\API\obj\Debug\net7.0\API.GeneratedMSBuildEditorConfig.editorconfig
+E:\Ahmed\Projects\20240519 - may\Store - V01\API\obj\Debug\net7.0\API.AssemblyInfoInputs.cache
+E:\Ahmed\Projects\20240519 - may\Store - V01\API\obj\Debug\net7.0\API.AssemblyInfo.cs
+E:\Ahmed\Projects\20240519 - may\Store - V01\API\obj\Debug\net7.0\API.csproj.CoreCompileInputs.cache
+E:\Ahmed\Projects\20240519 - may\Store - V01\API\obj\Debug\net7.0\API.MvcApplicationPartsAssemblyInfo.cs
+E:\Ahmed\Projects\20240519 - may\Store - V01\API\obj\Debug\net7.0\API.MvcApplicationPartsAssemblyInfo.cache
+E:\Ahmed\Projects\20240519 - may\Store - V01\API\obj\Debug\net7.0\staticwebassets\msbuild.API.Microsoft.AspNetCore.StaticWebAssets.props
+E:\Ahmed\Projects\20240519 - may\Store - V01\API\obj\Debug\net7.0\staticwebassets\msbuild.build.API.props
+E:\Ahmed\Projects\20240519 - may\Store - V01\API\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.API.props
+E:\Ahmed\Projects\20240519 - may\Store - V01\API\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.API.props
+E:\Ahmed\Projects\20240519 - may\Store - V01\API\obj\Debug\net7.0\staticwebassets.pack.json
+E:\Ahmed\Projects\20240519 - may\Store - V01\API\obj\Debug\net7.0\staticwebassets.build.json
+E:\Ahmed\Projects\20240519 - may\Store - V01\API\obj\Debug\net7.0\staticwebassets.development.json
+E:\Ahmed\Projects\20240519 - may\Store - V01\API\obj\Debug\net7.0\scopedcss\bundle\API.styles.css
+E:\Ahmed\Projects\20240519 - may\Store - V01\API\obj\Debug\net7.0\API.csproj.CopyComplete
+E:\Ahmed\Projects\20240519 - may\Store - V01\API\obj\Debug\net7.0\API.dll
+E:\Ahmed\Projects\20240519 - may\Store - V01\API\obj\Debug\net7.0\refint\API.dll
+E:\Ahmed\Projects\20240519 - may\Store - V01\API\obj\Debug\net7.0\API.pdb
+E:\Ahmed\Projects\20240519 - may\Store - V01\API\obj\Debug\net7.0\API.genruntimeconfig.cache
+E:\Ahmed\Projects\20240519 - may\Store - V01\API\obj\Debug\net7.0\ref\API.dll
+E:\Ahmed\Projects\20240519 - may\Store - V01\API\bin\Debug\net7.0\Azure.Core.dll
+E:\Ahmed\Projects\20240519 - may\Store - V01\API\bin\Debug\net7.0\Azure.Identity.dll
+E:\Ahmed\Projects\20240519 - may\Store - V01\API\bin\Debug\net7.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+E:\Ahmed\Projects\20240519 - may\Store - V01\API\bin\Debug\net7.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+E:\Ahmed\Projects\20240519 - may\Store - V01\API\bin\Debug\net7.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+E:\Ahmed\Projects\20240519 - may\Store - V01\API\bin\Debug\net7.0\Microsoft.Bcl.AsyncInterfaces.dll
+E:\Ahmed\Projects\20240519 - may\Store - V01\API\bin\Debug\net7.0\Microsoft.Data.SqlClient.dll
+E:\Ahmed\Projects\20240519 - may\Store - V01\API\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.dll
+E:\Ahmed\Projects\20240519 - may\Store - V01\API\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+E:\Ahmed\Projects\20240519 - may\Store - V01\API\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Relational.dll
+E:\Ahmed\Projects\20240519 - may\Store - V01\API\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+E:\Ahmed\Projects\20240519 - may\Store - V01\API\bin\Debug\net7.0\Microsoft.Extensions.Identity.Core.dll
+E:\Ahmed\Projects\20240519 - may\Store - V01\API\bin\Debug\net7.0\Microsoft.Extensions.Identity.Stores.dll
+E:\Ahmed\Projects\20240519 - may\Store - V01\API\bin\Debug\net7.0\Microsoft.Extensions.Options.dll
+E:\Ahmed\Projects\20240519 - may\Store - V01\API\bin\Debug\net7.0\Microsoft.Identity.Client.dll
+E:\Ahmed\Projects\20240519 - may\Store - V01\API\bin\Debug\net7.0\Microsoft.Identity.Client.Extensions.Msal.dll
+E:\Ahmed\Projects\20240519 - may\Store - V01\API\bin\Debug\net7.0\Microsoft.IdentityModel.Abstractions.dll
+E:\Ahmed\Projects\20240519 - may\Store - V01\API\bin\Debug\net7.0\Microsoft.IdentityModel.JsonWebTokens.dll
+E:\Ahmed\Projects\20240519 - may\Store - V01\API\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
+E:\Ahmed\Projects\20240519 - may\Store - V01\API\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.dll
+E:\Ahmed\Projects\20240519 - may\Store - V01\API\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+E:\Ahmed\Projects\20240519 - may\Store - V01\API\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
+E:\Ahmed\Projects\20240519 - may\Store - V01\API\bin\Debug\net7.0\Microsoft.SqlServer.Server.dll
+E:\Ahmed\Projects\20240519 - may\Store - V01\API\bin\Debug\net7.0\Microsoft.Win32.SystemEvents.dll
+E:\Ahmed\Projects\20240519 - may\Store - V01\API\bin\Debug\net7.0\System.Configuration.ConfigurationManager.dll
+E:\Ahmed\Projects\20240519 - may\Store - V01\API\bin\Debug\net7.0\System.Drawing.Common.dll
+E:\Ahmed\Projects\20240519 - may\Store - V01\API\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll
+E:\Ahmed\Projects\20240519 - may\Store - V01\API\bin\Debug\net7.0\System.Memory.Data.dll
+E:\Ahmed\Projects\20240519 - may\Store - V01\API\bin\Debug\net7.0\System.Runtime.Caching.dll
+E:\Ahmed\Projects\20240519 - may\Store - V01\API\bin\Debug\net7.0\System.Security.Cryptography.ProtectedData.dll
+E:\Ahmed\Projects\20240519 - may\Store - V01\API\bin\Debug\net7.0\System.Security.Permissions.dll
+E:\Ahmed\Projects\20240519 - may\Store - V01\API\bin\Debug\net7.0\System.Windows.Extensions.dll
+E:\Ahmed\Projects\20240519 - may\Store - V01\API\bin\Debug\net7.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
+E:\Ahmed\Projects\20240519 - may\Store - V01\API\bin\Debug\net7.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
+E:\Ahmed\Projects\20240519 - may\Store - V01\API\bin\Debug\net7.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+E:\Ahmed\Projects\20240519 - may\Store - V01\API\bin\Debug\net7.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+E:\Ahmed\Projects\20240519 - may\Store - V01\API\bin\Debug\net7.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+E:\Ahmed\Projects\20240519 - may\Store - V01\API\bin\Debug\net7.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+E:\Ahmed\Projects\20240519 - may\Store - V01\API\bin\Debug\net7.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+E:\Ahmed\Projects\20240519 - may\Store - V01\API\bin\Debug\net7.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+E:\Ahmed\Projects\20240519 - may\Store - V01\API\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+E:\Ahmed\Projects\20240519 - may\Store - V01\API\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+E:\Ahmed\Projects\20240519 - may\Store - V01\API\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+E:\Ahmed\Projects\20240519 - may\Store - V01\API\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+E:\Ahmed\Projects\20240519 - may\Store - V01\API\bin\Debug\net7.0\Humanizer.dll
+E:\Ahmed\Projects\20240519 - may\Store - V01\API\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Design.dll
+E:\Ahmed\Projects\20240519 - may\Store - V01\API\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
+E:\Ahmed\Projects\20240519 - may\Store - V01\API\bin\Debug\net7.0\Mono.TextTemplating.dll
+E:\Ahmed\Projects\20240519 - may\Store - V01\API\bin\Debug\net7.0\System.CodeDom.dll
+E:\Ahmed\Projects\20240519 - may\Store - V01\API\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+E:\Ahmed\Projects\20240519 - may\Store - V01\API\bin\Debug\net7.0\AutoMapper.dll
+E:\Ahmed\Projects\STORE\20240603-may-store\StoreV01\API\bin\Debug\net7.0\appsettings.Development.json
+E:\Ahmed\Projects\STORE\20240603-may-store\StoreV01\API\bin\Debug\net7.0\appsettings.json
+E:\Ahmed\Projects\STORE\20240603-may-store\StoreV01\API\bin\Debug\net7.0\API.exe
+E:\Ahmed\Projects\STORE\20240603-may-store\StoreV01\API\bin\Debug\net7.0\API.deps.json
+E:\Ahmed\Projects\STORE\20240603-may-store\StoreV01\API\bin\Debug\net7.0\API.runtimeconfig.json
+E:\Ahmed\Projects\STORE\20240603-may-store\StoreV01\API\bin\Debug\net7.0\API.dll
+E:\Ahmed\Projects\STORE\20240603-may-store\StoreV01\API\bin\Debug\net7.0\API.pdb
+E:\Ahmed\Projects\STORE\20240603-may-store\StoreV01\API\bin\Debug\net7.0\AutoMapper.dll
+E:\Ahmed\Projects\STORE\20240603-may-store\StoreV01\API\bin\Debug\net7.0\Azure.Core.dll
+E:\Ahmed\Projects\STORE\20240603-may-store\StoreV01\API\bin\Debug\net7.0\Azure.Identity.dll
+E:\Ahmed\Projects\STORE\20240603-may-store\StoreV01\API\bin\Debug\net7.0\Humanizer.dll
+E:\Ahmed\Projects\STORE\20240603-may-store\StoreV01\API\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+E:\Ahmed\Projects\STORE\20240603-may-store\StoreV01\API\bin\Debug\net7.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+E:\Ahmed\Projects\STORE\20240603-may-store\StoreV01\API\bin\Debug\net7.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+E:\Ahmed\Projects\STORE\20240603-may-store\StoreV01\API\bin\Debug\net7.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+E:\Ahmed\Projects\STORE\20240603-may-store\StoreV01\API\bin\Debug\net7.0\Microsoft.AspNetCore.OpenApi.dll
+E:\Ahmed\Projects\STORE\20240603-may-store\StoreV01\API\bin\Debug\net7.0\Microsoft.Bcl.AsyncInterfaces.dll
+E:\Ahmed\Projects\STORE\20240603-may-store\StoreV01\API\bin\Debug\net7.0\Microsoft.Data.SqlClient.dll
+E:\Ahmed\Projects\STORE\20240603-may-store\StoreV01\API\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.dll
+E:\Ahmed\Projects\STORE\20240603-may-store\StoreV01\API\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+E:\Ahmed\Projects\STORE\20240603-may-store\StoreV01\API\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Design.dll
+E:\Ahmed\Projects\STORE\20240603-may-store\StoreV01\API\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Relational.dll
+E:\Ahmed\Projects\STORE\20240603-may-store\StoreV01\API\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+E:\Ahmed\Projects\STORE\20240603-may-store\StoreV01\API\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
+E:\Ahmed\Projects\STORE\20240603-may-store\StoreV01\API\bin\Debug\net7.0\Microsoft.Extensions.Identity.Core.dll
+E:\Ahmed\Projects\STORE\20240603-may-store\StoreV01\API\bin\Debug\net7.0\Microsoft.Extensions.Identity.Stores.dll
+E:\Ahmed\Projects\STORE\20240603-may-store\StoreV01\API\bin\Debug\net7.0\Microsoft.Extensions.Options.dll
+E:\Ahmed\Projects\STORE\20240603-may-store\StoreV01\API\bin\Debug\net7.0\Microsoft.Identity.Client.dll
+E:\Ahmed\Projects\STORE\20240603-may-store\StoreV01\API\bin\Debug\net7.0\Microsoft.Identity.Client.Extensions.Msal.dll
+E:\Ahmed\Projects\STORE\20240603-may-store\StoreV01\API\bin\Debug\net7.0\Microsoft.IdentityModel.Abstractions.dll
+E:\Ahmed\Projects\STORE\20240603-may-store\StoreV01\API\bin\Debug\net7.0\Microsoft.IdentityModel.JsonWebTokens.dll
+E:\Ahmed\Projects\STORE\20240603-may-store\StoreV01\API\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
+E:\Ahmed\Projects\STORE\20240603-may-store\StoreV01\API\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.dll
+E:\Ahmed\Projects\STORE\20240603-may-store\StoreV01\API\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+E:\Ahmed\Projects\STORE\20240603-may-store\StoreV01\API\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
+E:\Ahmed\Projects\STORE\20240603-may-store\StoreV01\API\bin\Debug\net7.0\Microsoft.OpenApi.dll
+E:\Ahmed\Projects\STORE\20240603-may-store\StoreV01\API\bin\Debug\net7.0\Microsoft.SqlServer.Server.dll
+E:\Ahmed\Projects\STORE\20240603-may-store\StoreV01\API\bin\Debug\net7.0\Microsoft.Win32.SystemEvents.dll
+E:\Ahmed\Projects\STORE\20240603-may-store\StoreV01\API\bin\Debug\net7.0\Mono.TextTemplating.dll
+E:\Ahmed\Projects\STORE\20240603-may-store\StoreV01\API\bin\Debug\net7.0\Swashbuckle.AspNetCore.Swagger.dll
+E:\Ahmed\Projects\STORE\20240603-may-store\StoreV01\API\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+E:\Ahmed\Projects\STORE\20240603-may-store\StoreV01\API\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+E:\Ahmed\Projects\STORE\20240603-may-store\StoreV01\API\bin\Debug\net7.0\System.CodeDom.dll
+E:\Ahmed\Projects\STORE\20240603-may-store\StoreV01\API\bin\Debug\net7.0\System.Configuration.ConfigurationManager.dll
+E:\Ahmed\Projects\STORE\20240603-may-store\StoreV01\API\bin\Debug\net7.0\System.Drawing.Common.dll
+E:\Ahmed\Projects\STORE\20240603-may-store\StoreV01\API\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll
+E:\Ahmed\Projects\STORE\20240603-may-store\StoreV01\API\bin\Debug\net7.0\System.Memory.Data.dll
+E:\Ahmed\Projects\STORE\20240603-may-store\StoreV01\API\bin\Debug\net7.0\System.Runtime.Caching.dll
+E:\Ahmed\Projects\STORE\20240603-may-store\StoreV01\API\bin\Debug\net7.0\System.Security.Cryptography.ProtectedData.dll
+E:\Ahmed\Projects\STORE\20240603-may-store\StoreV01\API\bin\Debug\net7.0\System.Security.Permissions.dll
+E:\Ahmed\Projects\STORE\20240603-may-store\StoreV01\API\bin\Debug\net7.0\System.Windows.Extensions.dll
+E:\Ahmed\Projects\STORE\20240603-may-store\StoreV01\API\bin\Debug\net7.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
+E:\Ahmed\Projects\STORE\20240603-may-store\StoreV01\API\bin\Debug\net7.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
+E:\Ahmed\Projects\STORE\20240603-may-store\StoreV01\API\bin\Debug\net7.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+E:\Ahmed\Projects\STORE\20240603-may-store\StoreV01\API\bin\Debug\net7.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+E:\Ahmed\Projects\STORE\20240603-may-store\StoreV01\API\bin\Debug\net7.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+E:\Ahmed\Projects\STORE\20240603-may-store\StoreV01\API\bin\Debug\net7.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+E:\Ahmed\Projects\STORE\20240603-may-store\StoreV01\API\bin\Debug\net7.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+E:\Ahmed\Projects\STORE\20240603-may-store\StoreV01\API\bin\Debug\net7.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+E:\Ahmed\Projects\STORE\20240603-may-store\StoreV01\API\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+E:\Ahmed\Projects\STORE\20240603-may-store\StoreV01\API\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+E:\Ahmed\Projects\STORE\20240603-may-store\StoreV01\API\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+E:\Ahmed\Projects\STORE\20240603-may-store\StoreV01\API\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+E:\Ahmed\Projects\STORE\20240603-may-store\StoreV01\API\bin\Debug\net7.0\Core.dll
+E:\Ahmed\Projects\STORE\20240603-may-store\StoreV01\API\bin\Debug\net7.0\Infrastructure.dll
+E:\Ahmed\Projects\STORE\20240603-may-store\StoreV01\API\bin\Debug\net7.0\Infrastructure.pdb
+E:\Ahmed\Projects\STORE\20240603-may-store\StoreV01\API\bin\Debug\net7.0\Core.pdb
+E:\Ahmed\Projects\STORE\20240603-may-store\StoreV01\API\obj\Debug\net7.0\API.csproj.AssemblyReference.cache
+E:\Ahmed\Projects\STORE\20240603-may-store\StoreV01\API\obj\Debug\net7.0\API.GeneratedMSBuildEditorConfig.editorconfig
+E:\Ahmed\Projects\STORE\20240603-may-store\StoreV01\API\obj\Debug\net7.0\API.AssemblyInfoInputs.cache
+E:\Ahmed\Projects\STORE\20240603-may-store\StoreV01\API\obj\Debug\net7.0\API.AssemblyInfo.cs
+E:\Ahmed\Projects\STORE\20240603-may-store\StoreV01\API\obj\Debug\net7.0\API.csproj.CoreCompileInputs.cache
+E:\Ahmed\Projects\STORE\20240603-may-store\StoreV01\API\obj\Debug\net7.0\API.MvcApplicationPartsAssemblyInfo.cs
+E:\Ahmed\Projects\STORE\20240603-may-store\StoreV01\API\obj\Debug\net7.0\API.MvcApplicationPartsAssemblyInfo.cache
+E:\Ahmed\Projects\STORE\20240603-may-store\StoreV01\API\obj\Debug\net7.0\staticwebassets\msbuild.API.Microsoft.AspNetCore.StaticWebAssets.props
+E:\Ahmed\Projects\STORE\20240603-may-store\StoreV01\API\obj\Debug\net7.0\staticwebassets\msbuild.build.API.props
+E:\Ahmed\Projects\STORE\20240603-may-store\StoreV01\API\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.API.props
+E:\Ahmed\Projects\STORE\20240603-may-store\StoreV01\API\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.API.props
+E:\Ahmed\Projects\STORE\20240603-may-store\StoreV01\API\obj\Debug\net7.0\staticwebassets.pack.json
+E:\Ahmed\Projects\STORE\20240603-may-store\StoreV01\API\obj\Debug\net7.0\staticwebassets.build.json
+E:\Ahmed\Projects\STORE\20240603-may-store\StoreV01\API\obj\Debug\net7.0\staticwebassets.development.json
+E:\Ahmed\Projects\STORE\20240603-may-store\StoreV01\API\obj\Debug\net7.0\scopedcss\bundle\API.styles.css
+E:\Ahmed\Projects\STORE\20240603-may-store\StoreV01\API\obj\Debug\net7.0\API.csproj.CopyComplete
+E:\Ahmed\Projects\STORE\20240603-may-store\StoreV01\API\obj\Debug\net7.0\API.dll
+E:\Ahmed\Projects\STORE\20240603-may-store\StoreV01\API\obj\Debug\net7.0\refint\API.dll
+E:\Ahmed\Projects\STORE\20240603-may-store\StoreV01\API\obj\Debug\net7.0\API.pdb
+E:\Ahmed\Projects\STORE\20240603-may-store\StoreV01\API\obj\Debug\net7.0\API.genruntimeconfig.cache
+E:\Ahmed\Projects\STORE\20240603-may-store\StoreV01\API\obj\Debug\net7.0\ref\API.dll
