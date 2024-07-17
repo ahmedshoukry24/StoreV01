@@ -16,7 +16,7 @@ namespace Infrastructure.Data.Configurations
             builder.HasKey(x => x.ID);
             builder.Property(x=>x.Name).IsRequired().HasMaxLength(50);
             builder.Property(x => x.Description).HasMaxLength(400);
-            builder.Property(x => x.Address).HasMaxLength(100);
+            //builder.Property(x => x.Address).HasMaxLength(100);
             builder.Property(x => x.EmailAddress).HasMaxLength(50);
             builder.Property(x => x.PhoneNumber).HasMaxLength(20);
 

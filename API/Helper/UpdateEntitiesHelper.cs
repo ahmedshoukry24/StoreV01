@@ -10,8 +10,8 @@ namespace API.Helper
             if (storeDto.Name != null)
                 store.Name = storeDto.Name;
 
-            if (storeDto.Address != null)
-                store.Address = storeDto.Address;
+            //if (storeDto.Address != null)
+            //    store.Address = storeDto.Address;
 
             if (storeDto.Description != null)
                 store.Description = storeDto.Description;

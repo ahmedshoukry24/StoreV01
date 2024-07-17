@@ -22,5 +22,14 @@ namespace Infrastructure.Repository
         {
             return await _dbContext.Stores.ToListAsync();
         }
+
+        public async Task<IEnumerable<Store>> GetAllWithBranches()
+        {
+            IEnumerable<Store> stores = await this._dbContext.Stores.Include(s => s.Branches).ToListAsync();
+            return stores;
+        }
+
+       
+       
     }
 }

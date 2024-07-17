@@ -14,6 +14,7 @@ namespace Core.Entities
         public string SKU { get; set; }
         public int StockQuantity { get; set; }
 
+        //public List<string> Images { get; set; }
 
         // Navigation property
         //[ForeignKey("Product")]

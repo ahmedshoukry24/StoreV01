@@ -17,9 +17,9 @@ namespace Core.Entities
         public bool IsActive { get; set; }
         public decimal Price { get; set; }
         public int StockQuantity { get; set; }
-        //public List<string> Images { get; set; }
+        
 
-
+        
         // *** Navigation Property *** 
 
         // many variations

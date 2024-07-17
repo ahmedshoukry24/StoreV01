@@ -19,6 +19,9 @@ namespace Core.Entities
         public string PhoneNumber { get; set; }
         public string EmailAddress { get; set; }
 
+        public bool IsDeleted { get; set; } 
+        public DateTime? DeletedDate { get; set; }
+
 
         #region *** Navigation Property *** 
 
