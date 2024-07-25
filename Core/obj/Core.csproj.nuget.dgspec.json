@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Ahmed\\Projects\\STORE\\20240603-may-store\\StoreV01\\Core\\Core.csproj": {}
+    "D:\\Projects\\StoreV01\\Core\\Core.csproj": {}
   },
   "projects": {
-    "E:\\Ahmed\\Projects\\STORE\\20240603-may-store\\StoreV01\\Core\\Core.csproj": {
+    "D:\\Projects\\StoreV01\\Core\\Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Ahmed\\Projects\\STORE\\20240603-may-store\\StoreV01\\Core\\Core.csproj",
+        "projectUniqueName": "D:\\Projects\\StoreV01\\Core\\Core.csproj",
         "projectName": "Core",
-        "projectPath": "E:\\Ahmed\\Projects\\STORE\\20240603-may-store\\StoreV01\\Core\\Core.csproj",
-        "packagesPath": "C:\\Users\\a_sho\\.nuget\\packages\\",
-        "outputPath": "E:\\Ahmed\\Projects\\STORE\\20240603-may-store\\StoreV01\\Core\\obj\\",
+        "projectPath": "D:\\Projects\\StoreV01\\Core\\Core.csproj",
+        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects\\StoreV01\\Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\a_sho\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -61,7 +61,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

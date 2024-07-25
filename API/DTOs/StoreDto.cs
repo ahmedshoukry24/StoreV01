@@ -20,6 +20,6 @@ namespace API.DTOs
         public string? PhoneNumber { get; set; }
         public string? EmailAddress { get; set; }
 
-        public List<BranchProps> Branches { get; set; }
+        public List<BranchProps>? Branches { get; set; }
     }
 }

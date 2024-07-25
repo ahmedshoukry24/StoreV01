@@ -3695,19 +3695,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\a_sho\\.nuget\\packages\\": {}
+    "C:\\Users\\user\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Ahmed\\Projects\\STORE\\20240603-may-store\\StoreV01\\API\\API.csproj",
+      "projectUniqueName": "D:\\Projects\\StoreV01\\API\\API.csproj",
       "projectName": "API",
-      "projectPath": "E:\\Ahmed\\Projects\\STORE\\20240603-may-store\\StoreV01\\API\\API.csproj",
-      "packagesPath": "C:\\Users\\a_sho\\.nuget\\packages\\",
-      "outputPath": "E:\\Ahmed\\Projects\\STORE\\20240603-may-store\\StoreV01\\API\\obj\\",
+      "projectPath": "D:\\Projects\\StoreV01\\API\\API.csproj",
+      "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+      "outputPath": "D:\\Projects\\StoreV01\\API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\a_sho\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3721,8 +3721,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "E:\\Ahmed\\Projects\\STORE\\20240603-may-store\\StoreV01\\Infrastructure\\Infrastructure.csproj": {
-              "projectPath": "E:\\Ahmed\\Projects\\STORE\\20240603-may-store\\StoreV01\\Infrastructure\\Infrastructure.csproj"
+            "D:\\Projects\\StoreV01\\Infrastructure\\Infrastructure.csproj": {
+              "projectPath": "D:\\Projects\\StoreV01\\Infrastructure\\Infrastructure.csproj"
             }
           }
         }
@@ -3785,7 +3785,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
       }
     }
   }
