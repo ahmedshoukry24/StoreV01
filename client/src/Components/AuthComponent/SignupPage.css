@@ -1,0 +1,151 @@
+.registeration-container {
+    background-color: darkcyan;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    width: 100%;
+    max-width: 700px;
+
+    padding: 25px 30px;
+    box-sizing: border-box;
+
+}
+
+.registeration-title {
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+}
+
+.registeration-title::before {
+    content: '';
+    background: #9b59b6;
+    position: absolute;
+    height: 3px;
+    width: 30px;
+    left: 0;
+    bottom: 0;
+}
+
+.registeration-container form .registreation-user-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0 12px 0;
+}
+
+.registeration-container form .registreation-user-details .registration-input-box {
+    width: calc(50% - 20px);
+    margin-bottom: 15px;
+    transition: all 0.5s ease;
+
+}
+
+.registreation-user-details .registration-input-box input {
+    height: 45px;
+    width: 100%;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    font-size: 16px;
+    border-bottom-width: 3px;
+    transition: all 0.3s ease;
+}
+
+.registreation-user-details .registration-input-box input:focus{
+    border-color: #9b59b6;
+}
+
+
+.registreation-user-details .registration-input-box .input-box-details {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+form .registration-gender-details .registration-gender-title{
+font-size: 20px;
+font-weight: 500;
+}
+form .registration-gender-details .register-gender-category{
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    margin: 14px 0;
+}
+form .registration-gender-details label{
+display: flex;
+align-items: center;
+}
+form .registration-gender-details label .dot{
+    width: 11px;
+    height: 11px;
+    background-color: #d9d9d9;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 3px solid transparent;
+    transition: all 0.3s ease;
+}
+
+#dot-1:checked ~ .register-gender-category label .one,
+#dot-2:checked ~ .register-gender-category label .two{
+    border-color: #d9d9d9;
+    background: #9b59b6;
+}
+
+form input[type="radio"]{
+    display: none;
+}
+form .registration-button {
+    height: 45px;
+    margin: 45px 0;
+}
+form .registration-button button{
+    height: 100%;
+    width: 100%;
+    background-color: #9b59b6;
+    border: none;
+    font-size: 18px;
+    font-weight: 500;
+    color: #ccc;
+    letter-spacing: 1px;
+    border-radius: 5px;
+}
+form .registration-button button:hover{
+    background-color: #8e50a7;
+    color: white;
+    cursor: pointer;
+}
+.registreation-user-details .registration-input-box .error-span{
+    color: rgb(194, 22, 22);
+    font-size: 10;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 600px) {
+    .registeration-container {
+        width: 80%; /* Adjust width for smaller screens */
+        padding: 20px 25px; /* Adjust padding for smaller screens */
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 10px;
+        box-sizing: border-box;
+    }
+    .registeration-container form .registreation-user-details .registration-input-box {
+        width: 100%;
+        transition: all 0.5s ease;
+        margin-bottom: 15px;
+    }
+}
+
+/* Media query for very small screens (e.g., mobile devices) */
+@media (max-width: 400px) {
+    .registeration-container {
+        width: 95%; /* Adjust width for very small screens */
+        padding: 15px; /* Adjust padding for very small screens */
+    }
+}

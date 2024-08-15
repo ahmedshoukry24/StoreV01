@@ -2,6 +2,7 @@
 using AutoMapper;
 using Core.Entities;
 using Core.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -38,6 +39,7 @@ namespace API.Controllers
 
         [HttpGet]
         [Route("Products")]
+        //[Authorize(Roles = "Employee")]
         public async Task<ActionResult<List<ProductDto>>> GetAll()
         {
             List<Product> products = await this._context.GetAll();

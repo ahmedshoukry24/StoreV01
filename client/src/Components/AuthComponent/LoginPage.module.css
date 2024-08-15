@@ -1,0 +1,48 @@
+.container{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 30%;
+    height: 30%;
+    }
+    .container div form{
+        background-color: bisque;
+    }
+    .title{
+        font-size: 25px;
+        font-weight: 500;
+        position: relative;
+    }
+    .title::before{
+        content: '';
+        width: 20px;
+        height: 3px;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        background-color: aquamarine;
+    }
+    .inputBox{
+        width: calc(100% - 20px);
+        margin-bottom: 15px;
+    }
+
+    .inputBox input{
+        height: 45px;
+        width: 100%;
+        border-radius: 5px;
+        outline: none; 
+        border: 1px solid #ccc;
+        padding-left: 15px;
+        font-size: 16px;
+        border-bottom-width: 3px;
+        transition: all 0.3s ease;
+    }
+    
+    @media (max-width: 600px) {
+        .container{
+    
+        }
+        
+    }

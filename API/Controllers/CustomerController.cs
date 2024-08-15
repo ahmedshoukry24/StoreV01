@@ -65,7 +65,22 @@ namespace API.Controllers
 
             await _userManager.AddToRoleAsync(user, "Customer");
 
-            return Ok(user.Id);
+            // create token for registered customer
+
+            IList<Claim> claims = await _userManager.GetClaimsAsync(user);
+            string? issuer = _configuration.GetSection("JWT").GetValue<string>("issuer");
+            string? audience = _configuration.GetSection("JWT").GetValue<string>("audience");
+            DateTime expiryDate = DateTime.Now.AddDays(3);
+
+            var key = TokenHelper.GenerateKey(_configuration);
+
+            var token = TokenHelper.GenerateToken(key, claims, issuer, audience, expiryDate);
+
+            return Ok(new
+            {
+                Token = token,
+                ExpiryDate = expiryDate
+            });
 
 
         }

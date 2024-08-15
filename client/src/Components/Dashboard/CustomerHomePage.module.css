@@ -1,0 +1,11 @@
+
+.container {
+    padding: 11vh 1vw 0 1vw;
+    width:100vw;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    background-color: darkcyan;
+}
+

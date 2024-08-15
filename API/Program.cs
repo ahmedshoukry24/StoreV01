@@ -27,13 +27,16 @@ builder.Services.AddScoped<IProductRepository, ProductRepository>();
 
 builder.Services.AddDbContext<StoreDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnectionString")));
 
+
+
 builder.Services.AddIdentity<User, IdentityRole>(
     opt =>
     {
         opt.Password.RequireNonAlphanumeric = false;
         opt.Password.RequiredLength = 8;
 
-    }).AddEntityFrameworkStores<StoreDbContext>();
+    }).AddRoles<IdentityRole>()
+    .AddEntityFrameworkStores<StoreDbContext>();
 
 //builder.Services.Configure<IdentityOptions>(opt =>
 //{
@@ -66,6 +69,19 @@ builder.Services.AddAuthentication(
         });
 
 
+// CORS
+builder.Services.AddCors(options =>
+{
+    //Web App
+    options.AddPolicy("WebApp", policyBuilder =>
+    {
+        policyBuilder.WithOrigins("http://localhost:3000");
+        policyBuilder.AllowAnyHeader();
+        policyBuilder.AllowAnyMethod();
+    });
+    // if I have more clients I should add them downhere
+
+});
 
 var app = builder.Build();
 
@@ -85,5 +101,21 @@ app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
+
+using(var scope = app.Services.CreateScope())
+{
+    var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
+
+    var roles = new[] { "Customer", "Employee" };
+
+    foreach(var role in roles)
+    {
+        if(!await roleManager.RoleExistsAsync(role))
+        {
+            await roleManager.CreateAsync(new IdentityRole(role));
+        }
+    }
+}
+app.UseCors("WebApp");
 
 app.Run();
