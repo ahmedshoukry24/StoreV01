@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./SignupPage.css";
-import ValidateSignupForm from "../../Services/ValidateSignupForm";
-import { SaveToken } from "../../Services/SaveToken";
+import ValidateSignupForm from "../../../Services/ValidateSignupForm";
+import { SaveToken } from "../../../Services/SaveToken";
 
 const SignupPage = () => {
   const emailPattern = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;

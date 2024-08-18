@@ -19,6 +19,7 @@ namespace Infrastructure.Data.Configurations
             //builder.Property(x => x.Address).HasMaxLength(100);
             builder.Property(x => x.EmailAddress).HasMaxLength(50);
             builder.Property(x => x.PhoneNumber).HasMaxLength(20);
+            builder.Property<string>(s=>s.Serial).HasMaxLength(15);
 
             builder.HasMany(x => x.Branches).WithOne(y => y.Store).HasForeignKey(c => c.StoreId);
         }

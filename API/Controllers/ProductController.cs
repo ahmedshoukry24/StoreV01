@@ -1,5 +1,7 @@
-﻿using API.DTOs;
+﻿using API.Helper;
 using AutoMapper;
+using Core.DTOs;
+using Core.DTOs.Models;
 using Core.Entities;
 using Core.Interfaces;
 using Microsoft.AspNetCore.Authorization;
@@ -29,6 +31,7 @@ namespace API.Controllers
             if(!ModelState.IsValid)
                 return BadRequest(ModelState);
 
+            productDto.Serial = RandomSerial.GenerateSerial(10);
             Product product = this._mapper.Map<Product>(productDto);
             bool res =  await this._context.Add(product);
             if (!res)
@@ -52,5 +55,15 @@ namespace API.Controllers
             return Ok(productsDto);
 
         }
+
+        [HttpGet]
+        [Route("SearchProductChange")]
+        public async Task<IActionResult> GetSearchProductChange(string searchText)
+        {
+            IList<ProductSearchProps> result = await _context.GetSearchProductChange(searchText);
+            
+            return Ok(result);
+        }
+
     }
 }

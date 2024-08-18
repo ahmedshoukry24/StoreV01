@@ -1,12 +1,13 @@
-﻿using API.Models;
+﻿using Core.DTOs.Models;
 using Core.Entities;
 using System.ComponentModel.DataAnnotations;
 
-namespace API.DTOs
+namespace Core.DTOs
 {
     public class StoreDto
     {
         public Guid ID { get; set; }
+        public string Serial { get; set; }
         [Required]
         public string Name { get; set; }
         public string? Description { get; set; }

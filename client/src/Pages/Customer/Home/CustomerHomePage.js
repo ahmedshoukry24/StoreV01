@@ -1,22 +1,14 @@
 import { useEffect, useState } from "react";
-import { GetProducts } from "../../Services/Products/ProductServices";
+import { GetProducts } from "../../../Services/Products/ProductServices";
 import classes from "./CustomerHomePage.module.css";
-import ProductCard from "../Cards/ProductCard/ProductCard";
+import ProductCard from "../../../Components/Cards/ProductCard/ProductCard";
 
 const CustomerHomePage = () => {
   
   const [produts, setProducts] = useState([]);
 
 
-  // useEffect(()=>{
-  //   const prodService =async ()=>{
-  //     const result = await GetProducts();
-  //     setProducts(result);
-  //   };
-
-  //   prodService();
-  // },[]);
-
+  
   useEffect(() => {
     const fetchProducts = async () => {
         try {
@@ -35,7 +27,7 @@ const CustomerHomePage = () => {
     <div className={classes.container}>
       {produts.map((item,index) => {
         return (
-          <ProductCard data={item} />
+          <ProductCard key={index} data={item} />
         );
       })}
     </div>

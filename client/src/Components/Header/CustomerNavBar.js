@@ -1,20 +1,17 @@
 import classes from "./CustomerNavBar.module.css";
+import ProductSearch from "./ProductSearch/ProductSearch";
 
 const CustomerNavBar = () => {
+
+  
+
   return (
     <header className={classes.header}>
       {/* logo */}
       <p className={classes.logo}>Logo</p>
 
       {/* search */}
-      <div>
-        <form>
-          <input className={classes["form-search-input"]} type="text" />
-          <button type="submit">
-            <i className="fa fa-search"></i>
-          </button>
-        </form>
-      </div>
+      <ProductSearch className={classes["product-search"]} />
 
       {/* right part */}
       <nav>

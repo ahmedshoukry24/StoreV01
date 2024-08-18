@@ -1,4 +1,4 @@
-﻿namespace API.Models
+﻿namespace Core.DTOs.Models
 {
     // Example Model to use in mapping (to select multiple values)
     public class BranchProps

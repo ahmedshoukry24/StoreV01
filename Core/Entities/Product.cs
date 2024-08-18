@@ -17,9 +17,10 @@ namespace Core.Entities
         public bool IsActive { get; set; }
         public decimal Price { get; set; }
         public int StockQuantity { get; set; }
-        
+        public string Serial { get; set; }
 
-        
+
+
         // *** Navigation Property *** 
 
         // many variations

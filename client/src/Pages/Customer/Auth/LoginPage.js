@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import c from "./LoginPage.module.css";
-import { SaveToken } from "../../Services/SaveToken";
+import { SaveToken } from "../../../Services/SaveToken";
 const LoginPage = () => {
   const [loginObject, setLoginObject] = useState({
     Email: "",

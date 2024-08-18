@@ -16,7 +16,7 @@ namespace Infrastructure.Data.Configurations
             builder.HasKey(x => x.ID);
             builder.Property(x => x.Price).HasColumnType("DECIMAL(18, 2)");
             builder.Property(x => x.SKU).HasMaxLength(100);
-
+            builder.Property<string>(s=>s.Serial).HasMaxLength(15);
 
         }
     }

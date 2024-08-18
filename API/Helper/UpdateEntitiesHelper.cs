@@ -1,4 +1,4 @@
-﻿using API.DTOs;
+﻿using Core.DTOs;
 using Core.Entities;
 
 namespace API.Helper

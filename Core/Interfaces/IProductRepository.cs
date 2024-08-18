@@ -1,4 +1,5 @@
-﻿using Core.Entities;
+﻿using Core.DTOs.Models;
+using Core.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,6 +11,8 @@ namespace Core.Interfaces
     public interface IProductRepository : IBaseRepository<Product>
     {
         Task<List<Product>> GetAll();
+
+        Task<IList<ProductSearchProps>> GetSearchProductChange(string searchText);
 
     }
 }

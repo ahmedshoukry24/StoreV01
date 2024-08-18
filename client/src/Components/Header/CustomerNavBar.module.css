@@ -20,29 +20,11 @@
     width: 10%;
     box-sizing: border-box;
 }
-.header > div{
+.product-search{
     width: 50%;
     box-sizing: border-box;
 }
-.form-search-input{
-    
-padding: 10px;
-width: 80%;
-box-sizing: border-box;
-font-size: 17px;
-border: 1px solid grey;
-background: #f1f1f1;
-}
-header div form button{
 
-    width: 20%;
-    padding: 10px;
-    box-sizing: border-box;
-    font-size: 17px;
-    border: 1px solid grey;
-    border-left: none; 
-    cursor: pointer;
-}
 
 .header nav{
     width: 40%;

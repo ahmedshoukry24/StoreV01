@@ -3,10 +3,11 @@ import "./App.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import RootElement from "./Components/RootsComponents/RootElement";
 import LandingPage from "./Components/Landing/LandingPage";
-import SignupPage from "./Components/AuthComponent/SignupPage";
-import LoginPage from "./Components/AuthComponent/LoginPage";
+import SignupPage from "./Pages/Customer/Auth/SignupPage";
+import LoginPage from "./Pages/Customer/Auth/LoginPage";
 import CustomerRoot from "./Components/RootsComponents/CutomerRoot";
-import CustomerHomePage from "./Components/Dashboard/CustomerHomePage";
+import CustomerHomePage from "./Pages/Customer/Home/CustomerHomePage";
+import ProductDetails from "./Pages/Customer/Product/ProductDetails";
 
 function App() {
   const router = createBrowserRouter([
@@ -23,7 +24,8 @@ function App() {
       path:'/Customer',
       element:<CustomerRoot/>,
       children:[
-        {path:'CustomerHomePage', element:<CustomerHomePage/>}
+        {path:'CustomerHomePage', element:<CustomerHomePage/>},
+        {path:'Product', element:<ProductDetails/>}
       ]
     }
   ]);

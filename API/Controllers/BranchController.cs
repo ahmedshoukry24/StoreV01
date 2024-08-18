@@ -1,5 +1,6 @@
-﻿using API.DTOs;
+﻿using API.Helper;
 using AutoMapper;
+using Core.DTOs;
 using Core.Entities;
 using Core.Interfaces;
 using Microsoft.AspNetCore.Http;
@@ -26,6 +27,7 @@ namespace API.Controllers
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
+            branchDto.Serial = RandomSerial.GenerateSerial(10);
             Branch branch = this._mapper.Map<Branch>(branchDto);
             branch.CreatedDate = DateTime.Now;
             branch.ModifiedDate = DateTime.Now;

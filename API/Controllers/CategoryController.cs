@@ -1,5 +1,6 @@
-﻿using API.DTOs;
+﻿using API.Helper;
 using AutoMapper;
+using Core.DTOs;
 using Core.Entities;
 using Core.Interfaces;
 using Microsoft.AspNetCore.Http;
@@ -24,6 +25,7 @@ namespace API.Controllers
         [Route("Add")]
         public async Task<IActionResult> AddCategory(CategoryDto categoryDto)
         {
+            categoryDto.Serial = RandomSerial.GenerateSerial(10);
             Category cat = this._mapper.Map<Category>(categoryDto);
             bool res =  await this._context.Add(cat);
             if (!res)

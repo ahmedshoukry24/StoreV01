@@ -4,8 +4,12 @@ import CustomerNavBar from "../Header/CustomerNavBar";
 const CustomerRoot = () => {
   return (
     <>
-      <CustomerNavBar />
-      <Outlet />
+      <div>
+        <CustomerNavBar />
+      </div>
+      <div style={{padding: '11vh 1vw 0 1vw', boxSizing:"border-box"}}>
+        <Outlet />
+      </div>
     </>
   );
 };

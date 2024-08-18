@@ -9,6 +9,7 @@ namespace Core.Entities
     public class Category
     {
         public Guid Id { get; set; }
+        public string Serial { get; set; }
         public string CategoryName { get; set; }
 
         // Navigation Properties

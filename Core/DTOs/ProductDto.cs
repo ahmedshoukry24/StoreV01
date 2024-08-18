@@ -1,8 +1,9 @@
-﻿namespace API.DTOs
+﻿namespace Core.DTOs
 {
     public class ProductDto
     {
         public Guid ID { get; set; }
+        public string Serial { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
         public DateTime CreatedDate { get; set; }

@@ -9,6 +9,7 @@ namespace Core.Entities
     public class Cart
     {
         public Guid Id { get; set; }
+        public string Serial { get; set; }
 
         // Navigation Properties
         public ICollection<CartVariation> CartVariations { get; set; }

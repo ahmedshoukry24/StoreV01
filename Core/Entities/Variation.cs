@@ -10,6 +10,7 @@ namespace Core.Entities
     public class Variation
     {
         public Guid ID { get; set; }
+        public string Serial { get; set; }
         public decimal Price { get; set; }
         public string SKU { get; set; }
         public int StockQuantity { get; set; }

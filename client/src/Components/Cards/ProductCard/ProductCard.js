@@ -2,14 +2,16 @@ import React from 'react'
 import classes from './productCard.module.css'
 const ProductCard = (props) => {
     const data = props.data;
+
     const truncate = (text, maxLength) => {
         if (text.length > maxLength) {
           text = text.substr(0, maxLength) + "...";
         }
         return text;
       };
+
   return (
-    <div key={data.id} className={classes.card}>
+    <div className={`${classes.card} ${props.className}`}>
             <div className={classes.img}>
               <img src="https://reactjs.org/logo-og.png" alt="" />
             </div>
