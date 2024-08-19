@@ -1,5 +1,6 @@
 ﻿using Core.Entities.User;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
@@ -33,6 +34,24 @@ namespace API.Helper
 
             return new JwtSecurityTokenHandler().WriteToken(jwtToken) ;
 
+        }
+
+        public static async Task<object> CreateTokenObject<T> (T user, IConfiguration configuration,UserManager<T> userManager) where T : class
+        {
+            string? issuer = configuration.GetSection("issuer").GetValue<string>("issuer");
+            string? audienc = configuration.GetSection("issuer").GetValue<string>("audience");
+            //IList<Claim> claims = await userManager.GetClaimsAsync(user);
+            IList<Claim> claims = await userManager.GetClaimsAsync(user);
+            DateTime expiryDate = DateTime.Now.AddDays(3);
+
+            SymmetricSecurityKey key = TokenHelper.GenerateKey(configuration);
+            string token = TokenHelper.GenerateToken(key, claims, issuer, audienc, expiryDate);
+
+            return new
+            {
+                Token = token,
+                ExpiryDate = expiryDate
+            };
         }
     }
 }

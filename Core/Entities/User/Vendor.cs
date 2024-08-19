@@ -8,5 +8,7 @@ namespace Core.Entities.User
 {
     public class Vendor : User
     {
+      
+
     }
 }

@@ -25,10 +25,11 @@ namespace Infrastructure.Data
             //modelBuilder.ApplyConfiguration(new ProductConfiguration());
             modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
 
-            modelBuilder.Entity<User>().HasDiscriminator<string>("Discriminator").HasValue<Customer>("Customer")
-                .HasValue<Vendor>("Vendor").HasValue<Employee>("Employee");
+            //modelBuilder.Entity<User>().HasDiscriminator<string>("Discriminator").HasValue<Customer>("Customer")
+            //    .HasValue<Vendor>("Vendor").HasValue<Employee>("Employee");
 
             modelBuilder.Entity<User>().ToTable("Users");
+            modelBuilder.Entity<User>().UseTptMappingStrategy();
         }
         #region DbSets
         public DbSet<Product> Products { get; set; }
@@ -39,7 +40,7 @@ namespace Infrastructure.Data
         public DbSet<CartVariation> CartsVariation { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<Customer> Customers { get; set; }
-        public DbSet<Vendor> Vendors  { get; set; }
+        public DbSet<Vendor> Vendors { get; set; }
         public DbSet<Employee> Employees { get; set; }
         #endregion
 

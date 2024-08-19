@@ -8,6 +8,6 @@ namespace Core.Entities.User
 {
     public class Customer : User
     {
-
+        
     }
 }

@@ -4,6 +4,7 @@ using Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Infrastructure.Data.Migrations
 {
     [DbContext(typeof(StoreDbContext))]
-    partial class StoreDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240818162031_removeDiscriminator")]
+    partial class removeDiscriminator
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -301,8 +304,6 @@ namespace Infrastructure.Data.Migrations
                         .HasFilter("[NormalizedUserName] IS NOT NULL");
 
                     b.ToTable("Users", (string)null);
-
-                    b.UseTptMappingStrategy();
                 });
 
             modelBuilder.Entity("Core.Entities.Variation", b =>
@@ -520,27 +521,6 @@ namespace Infrastructure.Data.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
-            modelBuilder.Entity("Core.Entities.User.Customer", b =>
-                {
-                    b.HasBaseType("Core.Entities.User.User");
-
-                    b.ToTable("Customers");
-                });
-
-            modelBuilder.Entity("Core.Entities.User.Employee", b =>
-                {
-                    b.HasBaseType("Core.Entities.User.User");
-
-                    b.ToTable("Employees");
-                });
-
-            modelBuilder.Entity("Core.Entities.User.Vendor", b =>
-                {
-                    b.HasBaseType("Core.Entities.User.User");
-
-                    b.ToTable("Vendors");
-                });
-
             modelBuilder.Entity("Core.Entities.Branch", b =>
                 {
                     b.HasOne("Core.Entities.Store", "Store")
@@ -658,33 +638,6 @@ namespace Infrastructure.Data.Migrations
                     b.HasOne("Core.Entities.User.User", null)
                         .WithMany()
                         .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("Core.Entities.User.Customer", b =>
-                {
-                    b.HasOne("Core.Entities.User.User", null)
-                        .WithOne()
-                        .HasForeignKey("Core.Entities.User.Customer", "Id")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("Core.Entities.User.Employee", b =>
-                {
-                    b.HasOne("Core.Entities.User.User", null)
-                        .WithOne()
-                        .HasForeignKey("Core.Entities.User.Employee", "Id")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("Core.Entities.User.Vendor", b =>
-                {
-                    b.HasOne("Core.Entities.User.User", null)
-                        .WithOne()
-                        .HasForeignKey("Core.Entities.User.Vendor", "Id")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });

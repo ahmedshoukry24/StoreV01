@@ -4,6 +4,7 @@ using Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Infrastructure.Data.Migrations
 {
     [DbContext(typeof(StoreDbContext))]
-    partial class StoreDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240818134648_addingVariationsProps")]
+    partial class addingVariationsProps
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -244,6 +247,10 @@ namespace Infrastructure.Data.Migrations
                         .IsConcurrencyToken()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Discriminator")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Email")
                         .HasMaxLength(256)
                         .HasColumnType("nvarchar(256)");
@@ -302,7 +309,9 @@ namespace Infrastructure.Data.Migrations
 
                     b.ToTable("Users", (string)null);
 
-                    b.UseTptMappingStrategy();
+                    b.HasDiscriminator<string>("Discriminator").HasValue("User");
+
+                    b.UseTphMappingStrategy();
                 });
 
             modelBuilder.Entity("Core.Entities.Variation", b =>
@@ -524,21 +533,21 @@ namespace Infrastructure.Data.Migrations
                 {
                     b.HasBaseType("Core.Entities.User.User");
 
-                    b.ToTable("Customers");
+                    b.HasDiscriminator().HasValue("Customer");
                 });
 
             modelBuilder.Entity("Core.Entities.User.Employee", b =>
                 {
                     b.HasBaseType("Core.Entities.User.User");
 
-                    b.ToTable("Employees");
+                    b.HasDiscriminator().HasValue("Employee");
                 });
 
             modelBuilder.Entity("Core.Entities.User.Vendor", b =>
                 {
                     b.HasBaseType("Core.Entities.User.User");
 
-                    b.ToTable("Vendors");
+                    b.HasDiscriminator().HasValue("Vendor");
                 });
 
             modelBuilder.Entity("Core.Entities.Branch", b =>
@@ -658,33 +667,6 @@ namespace Infrastructure.Data.Migrations
                     b.HasOne("Core.Entities.User.User", null)
                         .WithMany()
                         .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("Core.Entities.User.Customer", b =>
-                {
-                    b.HasOne("Core.Entities.User.User", null)
-                        .WithOne()
-                        .HasForeignKey("Core.Entities.User.Customer", "Id")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("Core.Entities.User.Employee", b =>
-                {
-                    b.HasOne("Core.Entities.User.User", null)
-                        .WithOne()
-                        .HasForeignKey("Core.Entities.User.Employee", "Id")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("Core.Entities.User.Vendor", b =>
-                {
-                    b.HasOne("Core.Entities.User.User", null)
-                        .WithOne()
-                        .HasForeignKey("Core.Entities.User.Vendor", "Id")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });

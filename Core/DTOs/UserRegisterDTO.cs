@@ -2,7 +2,7 @@
 
 namespace Core.DTOs
 {
-    public class CustomerRegisterDTO
+    public class UserRegisterDTO
     {
         [Required]
         public string FirstName { get; set; }
@@ -16,8 +16,8 @@ namespace Core.DTOs
         public string PhoneNumber { get; set; }
         [Required]
         public string Password { get; set; }
-        [Required]
-        public string Discriminator { get; set; }
+        //[Required]
+        //public string Discriminator { get; set; }
 
     }
 }

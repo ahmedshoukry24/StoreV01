@@ -9,8 +9,14 @@ namespace Core.Entities.User
 {
     public class User : IdentityUser
     {
-        public string Discriminator { get; set; }
+        //public string Discriminator { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
+
+
+        //// navigation props
+        //public Employee Employee { get; set; }
+        //public Vendor Vendor { get; set; }
+        //public Customer Customer { get; set; }
     }
 }

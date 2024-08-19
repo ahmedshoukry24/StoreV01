@@ -8,6 +8,8 @@ namespace Core.Entities.User
 {
     public class Employee : User
     {
+      
+
 
     }
 }

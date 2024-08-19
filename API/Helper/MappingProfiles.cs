@@ -3,6 +3,7 @@ using AutoMapper;
 using Core.DTOs;
 using Core.DTOs.Models;
 using Core.Entities;
+using Core.Entities.User;
 
 namespace API.Helper
 {
@@ -24,6 +25,8 @@ namespace API.Helper
             // check on update
             CreateMap<ProductDto, Product>().BeforeMap((s,d)=>d.CreatedDate = DateTime.Now);
             CreateMap<Product, ProductDto>();
+
+            CreateMap<User, Customer>();
 
         }
     }
