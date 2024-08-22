@@ -27,19 +27,43 @@ namespace API.Controllers
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
-            branchDto.Serial = RandomSerial.GenerateSerial(10);
             Branch branch = this._mapper.Map<Branch>(branchDto);
-            branch.CreatedDate = DateTime.Now;
-            branch.ModifiedDate = DateTime.Now;
-            branch.IsActive = false;
+            
 
-            bool result = await this._context.Add(branch);
+            Branch result = await this._context.Add(branch);
 
-            if (result)
-                return Ok("Branch created sucsessfully!");
+            if (result != null)
+                return CreatedAtAction("GetBranch",new {id = result.ID},result);
             else
                 return BadRequest("Something wend wrong!");
         }
+
+
+        [HttpGet]
+        [Route("Get/{id}")]
+        public async Task<IActionResult> GetBranch(Guid id)
+        {
+            Branch branch = await _context.GetByIdAsync(id);
+
+            BranchDto branchDto = _mapper.Map<BranchDto>(branch);
+            if (branch == null)
+                return BadRequest("No Branch found!");
+            return Ok(branch);
+        }
+
+        [HttpGet]
+        [Route("GetByStore/{storeId}")]
+        public async Task<ActionResult<IEnumerable<BranchDto>>> GetAllByStore(Guid storeId)
+        {
+            IEnumerable<Branch> branches = await _context.GetAllByStore(storeId);
+
+            IEnumerable<BranchDto> branchsDto = _mapper.Map<IEnumerable<BranchDto>>(branches);
+            if (branchsDto.Count() == 0)
+                return Ok("No Branched Found!");
+            return Ok(branchsDto);
+
+        }
+
 
     }
 }

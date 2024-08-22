@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Core.Entities.User;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,7 +14,7 @@ namespace Core.Entities
         public string Name { get; set; }
         public string Description { get; set; }
         public DateTime CreatedDate { get; set; }
-        public DateTime ModifiedDate { get; set; }
+        public DateTime? ModifiedDate { get; set; }
         public bool IsActive { get; set; }
         //public string Address { get; set; }
         public string PhoneNumber { get; set; }
@@ -26,6 +27,9 @@ namespace Core.Entities
 
         // Navigation Properties
         public List<Branch> Branches { get; set; }
+        public string VendorId { get; set; }
+        public Vendor  Vendor { get; set; }
+
 
     }
 }

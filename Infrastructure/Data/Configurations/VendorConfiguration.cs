@@ -13,6 +13,7 @@ namespace Infrastructure.Data.Configurations
     {
         public void Configure(EntityTypeBuilder<Vendor> builder)
         {
+            builder.HasMany(s => s.Stores).WithOne(v => v.Vendor).HasForeignKey(fk => fk.VendorId);
         }
     }
 }

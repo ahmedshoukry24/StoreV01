@@ -1,4 +1,5 @@
-﻿using Core.Entities;
+﻿using Core.DTOs.Models;
+using Core.Entities;
 using Core.Interfaces;
 using Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;

@@ -1,6 +1,7 @@
 ﻿using Core.Interfaces;
 using Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.ChangeTracking;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,7 +25,8 @@ namespace Infrastructure.Repository
 
         public async Task<T> GetByIdAsync(Guid id)
         {
-            return await this._context.Set<T>().FindAsync(id);
+            T? result = await this._context.Set<T>().FindAsync(id);
+            return result;
         }
 
         //public async Task Save()
@@ -38,11 +40,12 @@ namespace Infrastructure.Repository
             await this._context.SaveChangesAsync();
             
         }
-        public async Task<bool> Add(T entity)
+        public async Task<T> Add(T entity)
         {
             var result = await this._context.Set<T>().AddAsync(entity);
             await this._context.SaveChangesAsync();
-            return result != null ? true:false;
+            return result.Entity;
         }
+
     }
 }

@@ -33,8 +33,8 @@ namespace API.Controllers
 
             productDto.Serial = RandomSerial.GenerateSerial(10);
             Product product = this._mapper.Map<Product>(productDto);
-            bool res =  await this._context.Add(product);
-            if (!res)
+            Product res =  await this._context.Add(product);
+            if (res != null)
                 return BadRequest("Something went wrong!");
             else
                 return Ok("Product Added!");
@@ -42,7 +42,7 @@ namespace API.Controllers
 
         [HttpGet]
         [Route("Products")]
-        //[Authorize(Roles = "Employee")]
+        //[Authorize(Policy = "specificVendors")]
         public async Task<ActionResult<List<ProductDto>>> GetAll()
         {
             List<Product> products = await this._context.GetAll();

@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using System.Security.Claims;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -24,6 +25,7 @@ builder.Services.AddScoped<IStoreRepository, StoreRepository>();
 builder.Services.AddScoped<IBranchRepository, BranchRepository>();
 builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
+builder.Services.AddScoped<IVariationRepository, VariationRepository>();
 
 builder.Services.AddDbContext<StoreDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnectionString")));
 
@@ -63,10 +65,28 @@ builder.Services.AddAuthentication(
                 ValidateLifetime = true,
                 ValidIssuer = builder.Configuration.GetSection("JWT").GetValue<string>("issuer"),
                 ValidAudience = builder.Configuration.GetSection("JWT").GetValue<string>("audience"),
-                IssuerSigningKey = TokenHelper.GenerateKey(builder.Configuration)
+                IssuerSigningKey = TokenHelper.GenerateKey(builder.Configuration),
+                //RoleClaimType = ClaimTypes.Role
 
             };
         });
+
+
+//builder.Services.AddAuthorization(options =>
+//{
+//    options.AddPolicy("VendorPolicy", (con) =>
+//    {
+//        con.RequireClaim(ClaimTypes.Role, "Vendor");
+//    });
+//});
+
+//builder.Services.AddAuthorization(options =>
+//{
+//    options.AddPolicy("specificVendors", policy =>
+//    {
+//        policy.RequireClaim("Current", "Hi_This_Is_Current_Claim_Tor_Testing");
+//    });
+//});
 
 
 // CORS

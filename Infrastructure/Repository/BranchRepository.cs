@@ -1,6 +1,7 @@
 ﻿using Core.Entities;
 using Core.Interfaces;
 using Infrastructure.Data;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,6 +17,12 @@ namespace Infrastructure.Repository
         {
             this._dbContext = context;
         }
+
+        public async Task<IEnumerable<Branch>> GetAllByStore(Guid id)
+        {
+           return await this._dbContext.Branches.Where<Branch>(s=>s.StoreId == id).ToListAsync();
+        }
+
 
     }
 }

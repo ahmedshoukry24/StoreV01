@@ -7,8 +7,10 @@ using System.Threading.Tasks;
 
 namespace Core.Interfaces
 {
-    public interface IBranchRepository : IBaseRepository<Branch>
-    {
-        Task<IEnumerable<Branch>> GetAllByStore(Guid id);
+    public interface IVariationRepository : IBaseRepository<Variation> { 
+
+
+        Task<IEnumerable<Variation>> GetAll(Guid productId);
+
     }
 }

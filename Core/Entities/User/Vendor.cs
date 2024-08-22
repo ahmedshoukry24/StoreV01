@@ -8,7 +8,10 @@ namespace Core.Entities.User
 {
     public class Vendor : User
     {
-      
+
+        // navigation props
+        public List<Store> Stores { get; set; }
+
 
     }
 }

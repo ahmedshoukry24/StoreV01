@@ -27,8 +27,8 @@ namespace API.Controllers
         {
             categoryDto.Serial = RandomSerial.GenerateSerial(10);
             Category cat = this._mapper.Map<Category>(categoryDto);
-            bool res =  await this._context.Add(cat);
-            if (!res)
+            Category res =  await this._context.Add(cat);
+            if (res != null)
                 return BadRequest("something went wrong!");
             else
                 return Ok("Category Added!");

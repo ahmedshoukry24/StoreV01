@@ -12,6 +12,6 @@ namespace Core.Interfaces
         //Task Save();
         Task Update(T entity);
         Task Delete(T entity);
-        Task<bool> Add( T entity);
+        Task<T> Add( T entity);
     }
 }

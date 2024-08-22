@@ -38,11 +38,14 @@ namespace API.Helper
 
         public static async Task<object> CreateTokenObject<T> (T user, IConfiguration configuration,UserManager<T> userManager) where T : class
         {
-            string? issuer = configuration.GetSection("issuer").GetValue<string>("issuer");
-            string? audienc = configuration.GetSection("issuer").GetValue<string>("audience");
+            string? issuer = configuration.GetSection("JWT").GetValue<string>("issuer");
+            string? audienc = configuration.GetSection("JWT").GetValue<string>("audience");
             //IList<Claim> claims = await userManager.GetClaimsAsync(user);
             IList<Claim> claims = await userManager.GetClaimsAsync(user);
             DateTime expiryDate = DateTime.Now.AddDays(3);
+
+            //if(type == 1)
+            //    claims.Add(new Claim("Current", "Hi_This_Is_Current_Claim_Tor_Testing"));
 
             SymmetricSecurityKey key = TokenHelper.GenerateKey(configuration);
             string token = TokenHelper.GenerateToken(key, claims, issuer, audienc, expiryDate);

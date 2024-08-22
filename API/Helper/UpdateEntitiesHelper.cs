@@ -16,16 +16,17 @@ namespace API.Helper
             if (storeDto.Description != null)
                 store.Description = storeDto.Description;
 
-            if (storeDto.Description != null)
-                store.Description = storeDto.Description;
-
             store.ModifiedDate = DateTime.Now;
 
             if (storeDto.PhoneNumber != null)
                 store.PhoneNumber = storeDto.PhoneNumber;
 
-            if (storeDto.EmailAddress != null)
-                store.EmailAddress = storeDto.EmailAddress;
+            //if (storeDto.EmailAddress != null)
+            //    store.EmailAddress = storeDto.EmailAddress;
+
+            //if(storeDto.Serial != null)
+            //    store.Serial = storeDto.Serial;
+
 
 
             //return store;
