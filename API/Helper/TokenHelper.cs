@@ -1,4 +1,5 @@
-﻿using Core.Entities.User;
+﻿using Core.DTOs.Responses;
+using Core.Entities.User;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
@@ -36,7 +37,7 @@ namespace API.Helper
 
         }
 
-        public static async Task<object> CreateTokenObject<T> (T user, IConfiguration configuration,UserManager<T> userManager) where T : class
+        public static async Task<AuthResponseDto> CreateTokenObject<T> (T user, IConfiguration configuration,UserManager<T> userManager, string userId) where T : class
         {
             string? issuer = configuration.GetSection("JWT").GetValue<string>("issuer");
             string? audienc = configuration.GetSection("JWT").GetValue<string>("audience");
@@ -51,9 +52,12 @@ namespace API.Helper
             string token = TokenHelper.GenerateToken(key, claims, issuer, audienc, expiryDate);
 
             return new
-            {
+            AuthResponseDto {
                 Token = token,
-                ExpiryDate = expiryDate
+                ExpiryDate = expiryDate,
+                ErrorMessage = string.Empty,
+                Success = true,
+                userId = userId
             };
         }
     }

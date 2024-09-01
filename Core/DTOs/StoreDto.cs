@@ -21,6 +21,7 @@ namespace Core.DTOs
         
         public required string PhoneNumber { get; set; }
         public required string EmailAddress { get; set; }
+        public MediaProps Media { get; set; }
 
         public List<BranchProps> Branches { get; set; }
     }

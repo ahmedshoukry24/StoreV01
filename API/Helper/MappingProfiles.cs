@@ -30,7 +30,8 @@ namespace API.Helper
                     name = v.Name,
                     address = v.Address
                 })
-            ));
+            )).ForMember(x=>x.Media, i => i.MapFrom(c=>new MediaProps { Id = c.Media.Id, URL = c.Media.URL}));
+
             CreateMap<BranchDto, Branch>().BeforeMap((s, d) =>
             {
                 s.CreatedDate = DateTime.Now;

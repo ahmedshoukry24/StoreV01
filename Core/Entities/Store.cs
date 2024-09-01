@@ -31,5 +31,8 @@ namespace Core.Entities
         public Vendor  Vendor { get; set; }
 
 
+        public Media Media { get; set; }
+        //public Guid MediaId { get; set; }
+
     }
 }

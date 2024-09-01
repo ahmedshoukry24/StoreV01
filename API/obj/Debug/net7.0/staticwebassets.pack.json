@@ -1,0 +1,81 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\Projects\\StoreV01\\API\\wwwroot\\Uploads\\Common\\addNew.png",
+      "PackagePath": "staticwebassets\\Uploads\\Common\\addNew.png"
+    },
+    {
+      "Id": "D:\\Projects\\StoreV01\\API\\wwwroot\\Uploads\\Products\\7Ät9JEöN5üäößü1.png",
+      "PackagePath": "staticwebassets\\Uploads\\Products\\7Ät9JEöN5üäößü1.png"
+    },
+    {
+      "Id": "D:\\Projects\\StoreV01\\API\\wwwroot\\Uploads\\Products\\Ek76EwyNqÖä4TgW.docx",
+      "PackagePath": "staticwebassets\\Uploads\\Products\\Ek76EwyNqÖä4TgW.docx"
+    },
+    {
+      "Id": "D:\\Projects\\StoreV01\\API\\wwwroot\\Uploads\\Products\\GcoXfaDP4nNs9RE.png",
+      "PackagePath": "staticwebassets\\Uploads\\Products\\GcoXfaDP4nNs9RE.png"
+    },
+    {
+      "Id": "D:\\Projects\\StoreV01\\API\\wwwroot\\Uploads\\Products\\OußäÜRÖCKy5G1sz.png",
+      "PackagePath": "staticwebassets\\Uploads\\Products\\OußäÜRÖCKy5G1sz.png"
+    },
+    {
+      "Id": "D:\\Projects\\StoreV01\\API\\wwwroot\\Uploads\\Products\\productimg.png",
+      "PackagePath": "staticwebassets\\Uploads\\Products\\productimg.png"
+    },
+    {
+      "Id": "D:\\Projects\\StoreV01\\API\\wwwroot\\Uploads\\Products\\ÄrfhTc9eueäqäü2.png",
+      "PackagePath": "staticwebassets\\Uploads\\Products\\ÄrfhTc9eueäqäü2.png"
+    },
+    {
+      "Id": "D:\\Projects\\StoreV01\\API\\wwwroot\\Uploads\\Products\\äecQjÜnüF3k6RüO.png",
+      "PackagePath": "staticwebassets\\Uploads\\Products\\äecQjÜnüF3k6RüO.png"
+    },
+    {
+      "Id": "D:\\Projects\\StoreV01\\API\\wwwroot\\Uploads\\Products\\öDdlo4qmn3AÖSzä.png",
+      "PackagePath": "staticwebassets\\Uploads\\Products\\öDdlo4qmn3AÖSzä.png"
+    },
+    {
+      "Id": "D:\\Projects\\StoreV01\\API\\wwwroot\\Uploads\\Stores\\IfXäkDHM1ä9kpU4.JPG",
+      "PackagePath": "staticwebassets\\Uploads\\Stores\\IfXäkDHM1ä9kpU4.JPG"
+    },
+    {
+      "Id": "D:\\Projects\\StoreV01\\API\\wwwroot\\Uploads\\Stores\\IäCclÜvüxuVu6Jo.png",
+      "PackagePath": "staticwebassets\\Uploads\\Stores\\IäCclÜvüxuVu6Jo.png"
+    },
+    {
+      "Id": "D:\\Projects\\StoreV01\\API\\wwwroot\\Uploads\\Stores\\SmaefqÜoÖyöhÜWf.png",
+      "PackagePath": "staticwebassets\\Uploads\\Stores\\SmaefqÜoÖyöhÜWf.png"
+    },
+    {
+      "Id": "D:\\Projects\\StoreV01\\API\\wwwroot\\Uploads\\Stores\\U2rAn5NäöJüiiÜp.png",
+      "PackagePath": "staticwebassets\\Uploads\\Stores\\U2rAn5NäöJüiiÜp.png"
+    },
+    {
+      "Id": "D:\\Projects\\StoreV01\\API\\wwwroot\\Uploads\\Stores\\XÖAäÄWkla4fWÜFv.JPG",
+      "PackagePath": "staticwebassets\\Uploads\\Stores\\XÖAäÄWkla4fWÜFv.JPG"
+    },
+    {
+      "Id": "D:\\Projects\\StoreV01\\API\\wwwroot\\Uploads\\Stores\\nSaO7üEkVßHmeüÖ.JPG",
+      "PackagePath": "staticwebassets\\Uploads\\Stores\\nSaO7üEkVßHmeüÖ.JPG"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.API.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.API.props",
+      "PackagePath": "build\\API.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.API.props",
+      "PackagePath": "buildMultiTargeting\\API.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.API.props",
+      "PackagePath": "buildTransitive\\API.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

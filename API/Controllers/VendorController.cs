@@ -7,6 +7,7 @@ using Core.Entities.User;
 using System.Security.Claims;
 using Microsoft.IdentityModel.Tokens;
 using API.Helper;
+using Core.DTOs.Responses;
 
 namespace API.Controllers
 {
@@ -25,12 +26,18 @@ namespace API.Controllers
 
         [HttpPost]
         [Route("Register")]
-        public async Task<ActionResult> Register(UserRegisterDTO userRegisterDTO)
+        public async Task<ActionResult<AuthResponseDto>> Register(UserRegisterDTO userRegisterDTO)
         {
-            if(!ModelState.IsValid)
-                return BadRequest(ModelState);
+            //if(!ModelState.IsValid)
+            //    return BadRequest(ModelState);
 
-            
+            if (!ModelState.IsValid)
+            {
+                var errors = ModelState.Values.SelectMany(x => x.Errors).Select(x=>x.ErrorMessage).ToList();
+                var errorMessage = string.Join("; ", errors);
+                return BadRequest(AuthResponseDto.ErrorResponse(errorMessage));
+            }
+
 
             User? user = await _userManager.FindByEmailAsync(userRegisterDTO.Email);
 
@@ -62,11 +69,13 @@ namespace API.Controllers
 
             if(!result.Succeeded)
             {
+                string errors = string.Empty;
                 foreach(var error in result.Errors)
                 {
-                    ModelState.AddModelError(string.Empty, error.Description);
+                    //ModelState.AddModelError(string.Empty, error.Description);
+                    errors = string.Join("; ", error.Description);
                 }
-                return BadRequest(ModelState);
+                return BadRequest(AuthResponseDto.ErrorResponse(errors));
             }
 
             await _userManager.AddClaimsAsync(user, new List<Claim> {
@@ -77,33 +86,33 @@ namespace API.Controllers
             await _userManager.AddToRoleAsync(user, "Vendor");
 
 
-            var tokenObject = await TokenHelper.CreateTokenObject(user, _configuration, _userManager);
+            AuthResponseDto tokenObject = await TokenHelper.CreateTokenObject(user, _configuration, _userManager, user.Id);
             return Ok(tokenObject);
 
         }
 
         [HttpPost]
         [Route("Login")]
-        public async Task<ActionResult> Login(UserLoginDto userLoginDto)
+        public async Task<ActionResult<AuthResponseDto>> Login(UserLoginDto userLoginDto)
         {
             // check email
             User? vendor = await _userManager.FindByEmailAsync(userLoginDto.Email);
             if (vendor == null)
-                return BadRequest("invalid email or password!");
+                return BadRequest(AuthResponseDto.ErrorResponse("invalid email or password!"));
 
             // check password
             bool pass = await _userManager.CheckPasswordAsync(vendor, userLoginDto.Password);
             if (!pass)
-                return BadRequest("invalid email or password!");
+                return BadRequest(AuthResponseDto.ErrorResponse("invalid email or password!"));
 
             // check role
             IList<string> roles = await _userManager.GetRolesAsync(vendor);
             if (!roles.Contains("Vendor"))
-                return BadRequest("Email is already registered with another role, contact us if you want to be a vendor!");
+                return BadRequest(AuthResponseDto.ErrorResponse("Email is already registered with another role, contact us if you want to be a vendor!"));
             
 
-            var tokenObject = await TokenHelper.CreateTokenObject(vendor, _configuration, _userManager);
-            return Ok(tokenObject);
+            AuthResponseDto _authResponseDto = await TokenHelper.CreateTokenObject(vendor, _configuration, _userManager,vendor.Id);
+            return Ok(_authResponseDto);
         }
     }
 }

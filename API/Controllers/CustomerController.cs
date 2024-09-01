@@ -80,7 +80,7 @@ namespace API.Controllers
 
             await _userManager.AddToRoleAsync(customer, "Customer");
 
-            Object tokenObject = await TokenHelper.CreateTokenObject(customer, _configuration, _userManager);
+            Object tokenObject = await TokenHelper.CreateTokenObject(customer, _configuration, _userManager,customer.Id);
             return Ok(tokenObject);
 
 
@@ -112,7 +112,7 @@ namespace API.Controllers
             }
 
 
-            Object tokenObject = await TokenHelper.CreateTokenObject(customer, _configuration, _userManager);
+            Object tokenObject = await TokenHelper.CreateTokenObject(customer, _configuration, _userManager, customer.Id);
             return Ok(tokenObject);
         }
 

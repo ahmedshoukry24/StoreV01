@@ -1,6 +1,7 @@
 ﻿using API.Helper;
 using AutoMapper;
 using Core.DTOs;
+using Core.DTOs.Responses;
 using Core.Entities;
 using Core.Interfaces;
 using Microsoft.AspNetCore.Authorization;
@@ -24,47 +25,67 @@ namespace API.Controllers
 
         [HttpPost]
         [Route("Create")]
-        //[Authorize(Roles ="Vendor")]
-        public async Task<IActionResult> CreateStore(StoreDto storeDto)
+        [Authorize(Roles = "Vendor")]
+        public async Task<ActionResult<StoreResponse>> CreateStore(StoreDto storeDto)
         {
-            if (!ModelState.IsValid)
-                return BadRequest(ModelState);
 
+            if (!ModelState.IsValid)
+            {
+                var errors = ModelState.Values.SelectMany(x=>x.Errors).Select(x=>x.ErrorMessage).ToList();
+                string errorMessage = string.Join(";", errors);
+
+                return BadRequest(StoreResponse.ErrorResponse(errorMessage));
+            }
             //var userId = User.FindFirst(ClaimTypes.NameIdentifier).Value;
             string? userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
             if (userId != storeDto.VendorId)
-                return Forbid("Something wrong with user authorization!");
+                return Unauthorized(StoreResponse.ErrorResponse("Something wrong with user authorization!"));
+            //StoreResponse.ErrorResponse("Something wrong with user authorization!")
 
             Store store = _mapper.Map<Store>(storeDto);
-            //    new Store
-            //{
-            //    Name = storeDto.Name,
-            //    Description = storeDto.Description,
-            //    CreatedDate = DateTime.Now,
-            //    ModifiedDate = DateTime.Now,
-            //    IsActive = false,
-            //    //Address = storeDto.Address,
-            //    PhoneNumber = storeDto.PhoneNumber,
-            //    EmailAddress = storeDto.EmailAddress,
-            //    VendorId = storeDto.VendorId
-            //};
+            
 
             Store result = await _context.Add(store);
 
 
             if (result != null)
-                return Ok("Store Created Successfully!");
+                return Ok(StoreResponse.SuccessResponse("Store Created Successfully!",result.ID));
             else
-                return BadRequest("Something wend wrong!");
+                return BadRequest(StoreResponse.ErrorResponse("Something wend wrong!"));
         }
+
+
 
         [HttpGet]
         [Route("Stores")]
+        [Authorize(Roles ="Vendor")]
         public async Task<ActionResult<IEnumerable<Store>>> GetAll()
         {
             List<StoreDto> stores = _mapper.Map<List<StoreDto>>(await this._context.GetAll());
             return Ok(stores);
         }
+
+        [HttpGet]
+        [Route("Stores/{id}")]
+        [Authorize(Roles ="Vendor")]
+        public async Task<ActionResult<IEnumerable<Store>>> GetAll(string id)
+        {
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            if(userId == id)
+            {
+                List<StoreDto> stores = _mapper.Map<List<StoreDto>>(await this._context.GetAll(id));
+                if (stores == null)
+                    return BadRequest("Something went wrong!");
+                if (stores.Count == 0)
+                    return BadRequest("No stores added yet!");
+                
+                return Ok(stores);
+            }
+            return BadRequest("Unauthorized to see these stores!");
+
+        }
+
+
 
         [HttpGet]
         [Route("withBranches")]
@@ -108,7 +129,7 @@ namespace API.Controllers
         }
 
         [HttpDelete]
-        [Route("Dalete/{id}")]
+        [Route("Delete/{id}")]
         public async Task<IActionResult> DeleteStore(Guid id)
         {
             Store store = await this._context.GetByIdAsync(id);

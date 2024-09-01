@@ -135,6 +135,26 @@ namespace Infrastructure.Data.Migrations
                     b.ToTable("Categories");
                 });
 
+            modelBuilder.Entity("Core.Entities.Media", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("StoreId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("URL")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("StoreId")
+                        .IsUnique();
+
+                    b.ToTable("Media");
+                });
+
             modelBuilder.Entity("Core.Entities.Product", b =>
                 {
                     b.Property<Guid>("ID")
@@ -586,6 +606,17 @@ namespace Infrastructure.Data.Migrations
                     b.Navigation("ParentCategory");
                 });
 
+            modelBuilder.Entity("Core.Entities.Media", b =>
+                {
+                    b.HasOne("Core.Entities.Store", "Store")
+                        .WithOne("Media")
+                        .HasForeignKey("Core.Entities.Media", "StoreId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Store");
+                });
+
             modelBuilder.Entity("Core.Entities.Product", b =>
                 {
                     b.HasOne("Core.Entities.Branch", "Branch")
@@ -728,6 +759,8 @@ namespace Infrastructure.Data.Migrations
             modelBuilder.Entity("Core.Entities.Store", b =>
                 {
                     b.Navigation("Branches");
+
+                    b.Navigation("Media");
                 });
 
             modelBuilder.Entity("Core.Entities.Variation", b =>
