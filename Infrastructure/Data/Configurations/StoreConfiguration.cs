@@ -20,10 +20,10 @@ namespace Infrastructure.Data.Configurations
             builder.Property(x => x.EmailAddress).HasMaxLength(50);
             builder.Property(x => x.PhoneNumber).HasMaxLength(20);
             builder.Property<string>(s=>s.Serial).HasMaxLength(15);
-            //builder.Property<Guid>(s=>s.MediaId)
+            builder.HasIndex(x=>x.Serial).IsUnique();
 
             builder.HasMany(x => x.Branches).WithOne(y => y.Store).HasForeignKey(c => c.StoreId);
-            builder.HasOne(x => x.Media).WithOne(x => x.Store).HasForeignKey<Media>(x => x.StoreId);
+            //builder.HasOne(x => x.Media).WithOne(x => x.Store).HasForeignKey<Media>(x => x.StoreId);
         }
     }
 }

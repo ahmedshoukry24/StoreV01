@@ -9,5 +9,6 @@ namespace Core.Interfaces
 {
     public interface ICategoryRepository : IBaseRepository<Category>
     {
+        Task<IEnumerable<Category>> GetAll();
     }
 }

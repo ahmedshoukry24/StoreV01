@@ -14,5 +14,7 @@ namespace Core.Interfaces
 
         Task<IList<ProductSearchProps>> GetSearchProductChange(string searchText);
 
+        Task<IList<ProductSearchProps>> GetProductByCategoryId(Guid categoryId);
+
     }
 }

@@ -29,6 +29,12 @@ namespace Infrastructure.Repository
             return result;
         }
 
+        //public async Task<T> GetBySerial(string serial)
+        //{
+        //    T? result = await this._context.Set<T>().Where(x=>x.GetType().GetProperty("Serial").GetValue(serial,null).Equals(serial)).FirstOrDefaultAsync();
+        //    return result;
+        //}
+
         //public async Task Save()
         //{
         //    await this._context.SaveChangesAsync();

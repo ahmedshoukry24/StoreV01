@@ -35,6 +35,14 @@ namespace Infrastructure.Repository
                 }).ToListAsync();
             return result;
         }
+
+        public async Task<IList<ProductSearchProps>> GetProductByCategoryId(Guid categoryId)
+        {
+            IList<ProductSearchProps> products = await _context.Products.Where(x => x.CategoryId == categoryId).Select<Product, ProductSearchProps>(x => new ProductSearchProps { Name = x.Name, Serial=x.Serial }).ToListAsync();
+
+            return products;
+        }
+
         
     }
 }

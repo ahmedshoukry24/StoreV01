@@ -9,9 +9,11 @@ namespace Core.Interfaces
     public interface IBaseRepository<T>
     {
         Task<T> GetByIdAsync(Guid id);
+        //Task<T> GetBySerial(string serial);
         //Task Save();
         Task Update(T entity);
         Task Delete(T entity);
         Task<T> Add( T entity);
+
     }
 }

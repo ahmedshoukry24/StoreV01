@@ -14,7 +14,10 @@ namespace Core.Entities
 
         //Navigation Props
         public Store Store { get; set; }
-        public Guid StoreId { get; set; }
+        public Guid? StoreId { get; set; }
+
+        public Branch Branch { get; set; }
+        public Guid? BranchId { get; set; }
 
 
     }

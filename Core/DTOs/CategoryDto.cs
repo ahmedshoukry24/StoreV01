@@ -8,8 +8,8 @@ namespace Core.DTOs
         public string Serial { get; set; }
         public string CategoryName { get; set; }
         public Guid? ParentCategoryId { get; set; }
-        public ICollection<string>? ChildCategories { get; set; }
-        public ICollection<string>? Products { get; set; }
+        //public ICollection<string> ChildCategories { get; set; }
+        //public ICollection<string> Products { get; set; }
 
     }
 }

@@ -49,7 +49,7 @@ namespace API.Controllers
 
 
             if (result != null)
-                return Ok(StoreResponse.SuccessResponse("Store Created Successfully!",result.ID));
+                return Ok(StoreResponse.SuccessResponse("Store Created Successfully!",result.ID,result.Name));
             else
                 return BadRequest(StoreResponse.ErrorResponse("Something wend wrong!"));
         }

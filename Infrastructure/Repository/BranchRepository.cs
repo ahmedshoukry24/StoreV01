@@ -22,6 +22,20 @@ namespace Infrastructure.Repository
         {
            return await this._dbContext.Branches.Where<Branch>(s=>s.StoreId == id).ToListAsync();
         }
+        public async Task<IEnumerable<Branch>> GetAllByStoreSerial(string serial)
+        {
+            Store? store = await this._dbContext.Stores.FirstOrDefaultAsync(x => x.Serial == serial);
+            if(store != null)
+                return await this._dbContext.Branches.Include(x=>x.Media).Where<Branch>(s=>s.StoreId == store.ID).ToListAsync();
+
+            return new List<Branch>();               
+        }
+
+
+        public async Task<Branch> GetBySerialAsync(string serial)
+        {
+            return await _dbContext.Branches.Include(x=>x.Media).FirstOrDefaultAsync(x=>x.Serial == serial);
+        }
 
 
     }

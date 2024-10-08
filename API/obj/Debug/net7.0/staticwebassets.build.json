@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "c8IszTb2Y0QK+2mQClRajDXfVACYQo7ZsfVWuOOvA2Y=",
+  "Hash": "JJTJyaVuBFxnSE2UKHvB/hqO/3V9+dLCcLJGjPNzWLA=",
   "Source": "API",
   "BasePath": "_content/API",
   "Mode": "Default",
@@ -1054,6 +1054,23 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\Common\\addNew.png"
     },
     {
+      "Identity": "D:\\Projects\\StoreV01\\API\\wwwroot\\Uploads\\Common\\ImageNotFound.jpg",
+      "SourceId": "API",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Projects\\StoreV01\\API\\wwwroot\\",
+      "BasePath": "_content/API",
+      "RelativePath": "Uploads/Common/ImageNotFound.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Uploads\\Common\\ImageNotFound.jpg"
+    },
+    {
       "Identity": "D:\\Projects\\StoreV01\\API\\wwwroot\\Uploads\\Products\\7Ät9JEöN5üäößü1.png",
       "SourceId": "API",
       "SourceType": "Discovered",
@@ -1190,12 +1207,12 @@
       "OriginalItemSpec": "wwwroot\\Uploads\\Products\\productimg.png"
     },
     {
-      "Identity": "D:\\Projects\\StoreV01\\API\\wwwroot\\Uploads\\Stores\\IäCclÜvüxuVu6Jo.png",
+      "Identity": "D:\\Projects\\StoreV01\\API\\wwwroot\\Uploads\\Stores\\Store001\\K4QwzÜßoUWx5EÄÄ.jpg",
       "SourceId": "API",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Projects\\StoreV01\\API\\wwwroot\\",
       "BasePath": "_content/API",
-      "RelativePath": "Uploads/Stores/IäCclÜvüxuVu6Jo.png",
+      "RelativePath": "Uploads/Stores/Store001/K4QwzÜßoUWx5EÄÄ.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1204,15 +1221,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Uploads\\Stores\\IäCclÜvüxuVu6Jo.png"
+      "OriginalItemSpec": "wwwroot\\Uploads\\Stores\\Store001\\K4QwzÜßoUWx5EÄÄ.jpg"
     },
     {
-      "Identity": "D:\\Projects\\StoreV01\\API\\wwwroot\\Uploads\\Stores\\IfXäkDHM1ä9kpU4.JPG",
+      "Identity": "D:\\Projects\\StoreV01\\API\\wwwroot\\Uploads\\Stores\\Store001\\NKp4aä3tyjiAyäö.JPG",
       "SourceId": "API",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Projects\\StoreV01\\API\\wwwroot\\",
       "BasePath": "_content/API",
-      "RelativePath": "Uploads/Stores/IfXäkDHM1ä9kpU4.JPG",
+      "RelativePath": "Uploads/Stores/Store001/NKp4aä3tyjiAyäö.JPG",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1221,15 +1238,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Uploads\\Stores\\IfXäkDHM1ä9kpU4.JPG"
+      "OriginalItemSpec": "wwwroot\\Uploads\\Stores\\Store001\\NKp4aä3tyjiAyäö.JPG"
     },
     {
-      "Identity": "D:\\Projects\\StoreV01\\API\\wwwroot\\Uploads\\Stores\\nSaO7üEkVßHmeüÖ.JPG",
+      "Identity": "D:\\Projects\\StoreV01\\API\\wwwroot\\Uploads\\Stores\\Store001\\ÖHüI2jYcWFu6BfG.jpg",
       "SourceId": "API",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Projects\\StoreV01\\API\\wwwroot\\",
       "BasePath": "_content/API",
-      "RelativePath": "Uploads/Stores/nSaO7üEkVßHmeüÖ.JPG",
+      "RelativePath": "Uploads/Stores/Store001/ÖHüI2jYcWFu6BfG.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1238,15 +1255,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Uploads\\Stores\\nSaO7üEkVßHmeüÖ.JPG"
+      "OriginalItemSpec": "wwwroot\\Uploads\\Stores\\Store001\\ÖHüI2jYcWFu6BfG.jpg"
     },
     {
-      "Identity": "D:\\Projects\\StoreV01\\API\\wwwroot\\Uploads\\Stores\\SmaefqÜoÖyöhÜWf.png",
+      "Identity": "D:\\Projects\\StoreV01\\API\\wwwroot\\Uploads\\Stores\\Store001\\SÖÜGÖÄIXZgcßU7I.JPG",
       "SourceId": "API",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Projects\\StoreV01\\API\\wwwroot\\",
       "BasePath": "_content/API",
-      "RelativePath": "Uploads/Stores/SmaefqÜoÖyöhÜWf.png",
+      "RelativePath": "Uploads/Stores/Store001/SÖÜGÖÄIXZgcßU7I.JPG",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1255,15 +1272,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Uploads\\Stores\\SmaefqÜoÖyöhÜWf.png"
+      "OriginalItemSpec": "wwwroot\\Uploads\\Stores\\Store001\\SÖÜGÖÄIXZgcßU7I.JPG"
     },
     {
-      "Identity": "D:\\Projects\\StoreV01\\API\\wwwroot\\Uploads\\Stores\\U2rAn5NäöJüiiÜp.png",
+      "Identity": "D:\\Projects\\StoreV01\\API\\wwwroot\\Uploads\\Stores\\Store001\\tWälIÄkiÄkwjUOÄ.jpg",
       "SourceId": "API",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Projects\\StoreV01\\API\\wwwroot\\",
       "BasePath": "_content/API",
-      "RelativePath": "Uploads/Stores/U2rAn5NäöJüiiÜp.png",
+      "RelativePath": "Uploads/Stores/Store001/tWälIÄkiÄkwjUOÄ.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1272,15 +1289,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Uploads\\Stores\\U2rAn5NäöJüiiÜp.png"
+      "OriginalItemSpec": "wwwroot\\Uploads\\Stores\\Store001\\tWälIÄkiÄkwjUOÄ.jpg"
     },
     {
-      "Identity": "D:\\Projects\\StoreV01\\API\\wwwroot\\Uploads\\Stores\\XÖAäÄWkla4fWÜFv.JPG",
+      "Identity": "D:\\Projects\\StoreV01\\API\\wwwroot\\Uploads\\Stores\\Store001\\u3rzpÜnW1aäyÖäF.JPG",
       "SourceId": "API",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Projects\\StoreV01\\API\\wwwroot\\",
       "BasePath": "_content/API",
-      "RelativePath": "Uploads/Stores/XÖAäÄWkla4fWÜFv.JPG",
+      "RelativePath": "Uploads/Stores/Store001/u3rzpÜnW1aäyÖäF.JPG",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1289,7 +1306,41 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Uploads\\Stores\\XÖAäÄWkla4fWÜFv.JPG"
+      "OriginalItemSpec": "wwwroot\\Uploads\\Stores\\Store001\\u3rzpÜnW1aäyÖäF.JPG"
+    },
+    {
+      "Identity": "D:\\Projects\\StoreV01\\API\\wwwroot\\Uploads\\Stores\\Store001\\VkDTr91ÜUpocpßu.JPG",
+      "SourceId": "API",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Projects\\StoreV01\\API\\wwwroot\\",
+      "BasePath": "_content/API",
+      "RelativePath": "Uploads/Stores/Store001/VkDTr91ÜUpocpßu.JPG",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Uploads\\Stores\\Store001\\VkDTr91ÜUpocpßu.JPG"
+    },
+    {
+      "Identity": "D:\\Projects\\StoreV01\\API\\wwwroot\\Uploads\\Stores\\Store001\\ZßszüDiaÄßpGpßö.JPG",
+      "SourceId": "API",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Projects\\StoreV01\\API\\wwwroot\\",
+      "BasePath": "_content/API",
+      "RelativePath": "Uploads/Stores/Store001/ZßszüDiaÄßpGpßö.JPG",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Uploads\\Stores\\Store001\\ZßszüDiaÄßpGpßö.JPG"
     }
   ]
 }

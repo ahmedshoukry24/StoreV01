@@ -73,9 +73,43 @@ namespace Infrastructure.Data.Migrations
 
                     b.HasKey("ID");
 
+                    b.HasIndex("Serial")
+                        .IsUnique()
+                        .HasFilter("[Serial] IS NOT NULL");
+
                     b.HasIndex("StoreId");
 
                     b.ToTable("Branches", (string)null);
+                });
+
+            modelBuilder.Entity("Core.Entities.BranchProducts", b =>
+                {
+                    b.Property<Guid>("ProductId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("BranchId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("ModifiedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<decimal>("Price")
+                        .HasColumnType("DECIMAL(18, 2)");
+
+                    b.Property<int>("StockQuantity")
+                        .HasColumnType("int");
+
+                    b.HasKey("ProductId", "BranchId");
+
+                    b.HasIndex("BranchId");
+
+                    b.ToTable("BranchProducts");
                 });
 
             modelBuilder.Entity("Core.Entities.Cart", b =>
@@ -141,7 +175,10 @@ namespace Infrastructure.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid>("StoreId")
+                    b.Property<Guid?>("BranchId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid?>("StoreId")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("URL")
@@ -149,8 +186,13 @@ namespace Infrastructure.Data.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("BranchId")
+                        .IsUnique()
+                        .HasFilter("[BranchId] IS NOT NULL");
+
                     b.HasIndex("StoreId")
-                        .IsUnique();
+                        .IsUnique()
+                        .HasFilter("[StoreId] IS NOT NULL");
 
                     b.ToTable("Media");
                 });
@@ -159,9 +201,6 @@ namespace Infrastructure.Data.Migrations
                 {
                     b.Property<Guid>("ID")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("BranchId")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<Guid>("CategoryId")
@@ -186,19 +225,11 @@ namespace Infrastructure.Data.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
-                    b.Property<decimal>("Price")
-                        .HasColumnType("DECIMAL(18, 2)");
-
                     b.Property<string>("Serial")
                         .HasMaxLength(15)
                         .HasColumnType("nvarchar(15)");
 
-                    b.Property<int>("StockQuantity")
-                        .HasColumnType("int");
-
                     b.HasKey("ID");
-
-                    b.HasIndex("BranchId");
 
                     b.HasIndex("CategoryId");
 
@@ -251,6 +282,10 @@ namespace Infrastructure.Data.Migrations
                         .HasColumnType("nvarchar(450)");
 
                     b.HasKey("ID");
+
+                    b.HasIndex("Serial")
+                        .IsUnique()
+                        .HasFilter("[Serial] IS NOT NULL");
 
                     b.HasIndex("VendorId");
 
@@ -336,6 +371,9 @@ namespace Infrastructure.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<Guid>("BranchId")
+                        .HasColumnType("uniqueidentifier");
+
                     b.Property<string>("CPU")
                         .HasMaxLength(15)
                         .HasColumnType("nvarchar(15)");
@@ -407,7 +445,13 @@ namespace Infrastructure.Data.Migrations
 
                     b.HasKey("ID");
 
+                    b.HasIndex("BranchId");
+
                     b.HasIndex("ProductId");
+
+                    b.HasIndex("Serial")
+                        .IsUnique()
+                        .HasFilter("[Serial] IS NOT NULL");
 
                     b.ToTable("Variations");
                 });
@@ -577,6 +621,25 @@ namespace Infrastructure.Data.Migrations
                     b.Navigation("Store");
                 });
 
+            modelBuilder.Entity("Core.Entities.BranchProducts", b =>
+                {
+                    b.HasOne("Core.Entities.Branch", "Branch")
+                        .WithMany("BranchProducts")
+                        .HasForeignKey("BranchId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Core.Entities.Product", "Product")
+                        .WithMany("BranchesProducts")
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Branch");
+
+                    b.Navigation("Product");
+                });
+
             modelBuilder.Entity("Core.Entities.CartVariation", b =>
                 {
                     b.HasOne("Core.Entities.Cart", "Cart")
@@ -608,30 +671,26 @@ namespace Infrastructure.Data.Migrations
 
             modelBuilder.Entity("Core.Entities.Media", b =>
                 {
+                    b.HasOne("Core.Entities.Branch", "Branch")
+                        .WithOne("Media")
+                        .HasForeignKey("Core.Entities.Media", "BranchId");
+
                     b.HasOne("Core.Entities.Store", "Store")
                         .WithOne("Media")
-                        .HasForeignKey("Core.Entities.Media", "StoreId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("Core.Entities.Media", "StoreId");
+
+                    b.Navigation("Branch");
 
                     b.Navigation("Store");
                 });
 
             modelBuilder.Entity("Core.Entities.Product", b =>
                 {
-                    b.HasOne("Core.Entities.Branch", "Branch")
-                        .WithMany("Products")
-                        .HasForeignKey("BranchId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("Core.Entities.Category", "Category")
                         .WithMany("Products")
                         .HasForeignKey("CategoryId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.Navigation("Branch");
 
                     b.Navigation("Category");
                 });
@@ -647,11 +706,19 @@ namespace Infrastructure.Data.Migrations
 
             modelBuilder.Entity("Core.Entities.Variation", b =>
                 {
+                    b.HasOne("Core.Entities.Branch", "Branch")
+                        .WithMany("Variations")
+                        .HasForeignKey("BranchId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("Core.Entities.Product", "Product")
                         .WithMany("Variations")
                         .HasForeignKey("ProductId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Branch");
 
                     b.Navigation("Product");
                 });
@@ -736,7 +803,11 @@ namespace Infrastructure.Data.Migrations
 
             modelBuilder.Entity("Core.Entities.Branch", b =>
                 {
-                    b.Navigation("Products");
+                    b.Navigation("BranchProducts");
+
+                    b.Navigation("Media");
+
+                    b.Navigation("Variations");
                 });
 
             modelBuilder.Entity("Core.Entities.Cart", b =>
@@ -753,6 +824,8 @@ namespace Infrastructure.Data.Migrations
 
             modelBuilder.Entity("Core.Entities.Product", b =>
                 {
+                    b.Navigation("BranchesProducts");
+
                     b.Navigation("Variations");
                 });
 

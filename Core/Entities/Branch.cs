@@ -27,12 +27,16 @@ namespace Core.Entities
         #region *** Navigation Property *** 
 
         // many products in one branch
-        public List<Product> Products { get; set; }
+        //public List<Product> Products { get; set; }
+        public List<BranchProducts> BranchProducts { get; set; }
+        public List<Variation> Variations { get; set; }
 
         #region each branch under one store
         public Store Store { get; set; }
-        public Guid StoreId { get; set; } 
+        public Guid StoreId { get; set; }
         #endregion
+
+        public Media Media { get; set; }
 
         #endregion
     }

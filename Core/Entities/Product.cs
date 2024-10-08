@@ -15,8 +15,8 @@ namespace Core.Entities
         public DateTime CreatedDate { get; set; }
         public DateTime ModifiedDate { get; set; }
         public bool IsActive { get; set; }
-        public decimal Price { get; set; }
-        public int StockQuantity { get; set; }
+        //public decimal Price { get; set; }
+        //public int StockQuantity { get; set; }
         public string Serial { get; set; }
 
 
@@ -26,11 +26,12 @@ namespace Core.Entities
         // many variations
         public List<Variation> Variations { get; set; }
 
-        #region one branch for each product
+        #region one products exists in many branches
+       public List<BranchProducts> BranchesProducts { get; set; }
 
-        public Branch Branch { get; set; }
-        //[ForeignKey("Branch")]
-        public Guid BranchId { get; set; }
+        //public Branch Branch { get; set; }
+        ////[ForeignKey("Branch")]
+        //public Guid BranchId { get; set; }
 
         #endregion
 

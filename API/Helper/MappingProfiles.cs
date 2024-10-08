@@ -41,13 +41,18 @@ namespace API.Helper
                 s.IsActive = false;
                 s.Serial = RandomSerial.GenerateSerial(10);
             });
-            CreateMap<Branch, BranchDto>();
+            CreateMap<Branch, BranchDto>().ForMember(x => x.Media, i => i.MapFrom(x => new MediaProps { Id = x.ID, URL = x.Media.URL }));
 
 
 
 
 
-            CreateMap<CategoryDto,Category>();
+
+            CreateMap<CategoryDto, Category>().BeforeMap((s, d) =>
+            {
+                s.Serial = RandomSerial.GenerateSerial(10);
+            });
+            CreateMap<Category, CategoryDto>();
             // Products & Variations
             CreateMap<ProductDto, Product>();
             CreateMap<Product, ProductDto>();

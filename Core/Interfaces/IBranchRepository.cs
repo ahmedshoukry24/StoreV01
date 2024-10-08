@@ -10,5 +10,7 @@ namespace Core.Interfaces
     public interface IBranchRepository : IBaseRepository<Branch>
     {
         Task<IEnumerable<Branch>> GetAllByStore(Guid id);
+        Task<Branch> GetBySerialAsync(string serial);
+        Task<IEnumerable<Branch>> GetAllByStoreSerial(string serial);
     }
 }

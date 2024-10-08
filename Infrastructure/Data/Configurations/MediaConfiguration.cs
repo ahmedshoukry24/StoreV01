@@ -14,6 +14,9 @@ namespace Infrastructure.Data.Configurations
         public void Configure(EntityTypeBuilder<Media> builder)
         {
             builder.HasKey(x=>x.Id);
+
+            builder.HasOne(x => x.Store).WithOne(x => x.Media).HasForeignKey<Media>(x => x.StoreId);
+            builder.HasOne(x => x.Branch).WithOne(x => x.Media).HasForeignKey<Media>(x => x.BranchId);
             
             
         }

@@ -48,8 +48,8 @@ namespace API.Controllers
             List<Product> products = await this._context.GetAll();
             if (products == null)
                 return BadRequest("No Products!");
-            if (products.Count == 0)
-                return NotFound("No Products Added yet!");
+            //if (products.Count == 0)
+            //    return NotFound("No Products Added yet!");
 
             List<ProductDto> productsDto =  this._mapper.Map<List<ProductDto>>(products);
             return Ok(productsDto);
@@ -64,6 +64,16 @@ namespace API.Controllers
             
             return Ok(result);
         }
+
+        [HttpGet]
+        [Route("GetByCategoryId/{categoryId}")]
+        public async Task<ActionResult<IList<ProductSearchProps>>> GetByCategoryId(Guid categoryId)
+        {
+            IList<ProductSearchProps> products = await _context.GetProductByCategoryId(categoryId);
+            return Ok(products);
+        }
+
+        
 
        
 

@@ -11,6 +11,7 @@ namespace Core.DTOs.Responses
         public bool Status { get; set; }
         public string Message { get; set; }
         public Guid? StoreId { get; set; }
+        public string StoreName { get; set; }
 
         public static StoreResponse ErrorResponse(string errorMessage)
         {
@@ -18,13 +19,14 @@ namespace Core.DTOs.Responses
             {
                 Status = false,
                 Message = errorMessage,
-                StoreId = null
+                StoreId = null,
+                StoreName = null
             };
         }
 
-        public static StoreResponse SuccessResponse(string message, Guid storeId)
+        public static StoreResponse SuccessResponse(string message, Guid storeId, string storeName)
         {
-            return new StoreResponse { Status = true, Message = message, StoreId = storeId };
+            return new StoreResponse { Status = true, Message = message, StoreId = storeId, StoreName = storeName };
         }
     }
 }

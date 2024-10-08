@@ -25,13 +25,24 @@ namespace API.Controllers
         [Route("Add")]
         public async Task<IActionResult> AddCategory(CategoryDto categoryDto)
         {
-            categoryDto.Serial = RandomSerial.GenerateSerial(10);
+            //categoryDto.Serial = RandomSerial.GenerateSerial(10);
             Category cat = this._mapper.Map<Category>(categoryDto);
             Category res =  await this._context.Add(cat);
             if (res != null)
                 return BadRequest("something went wrong!");
             else
                 return Ok("Category Added!");
+        }
+
+        [HttpGet]
+        [Route("GetAll")]
+        public async Task<ActionResult<IEnumerable<CategoryDto>>> GetAll()
+        {
+            IEnumerable<Category> cats = await _context.GetAll();
+
+            IEnumerable<CategoryDto> categoryDtos = _mapper.Map<IEnumerable<CategoryDto>>(cats);
+            return Ok(categoryDtos);
+
         }
     }
 }

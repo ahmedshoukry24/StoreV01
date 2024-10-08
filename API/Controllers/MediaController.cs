@@ -11,14 +11,12 @@ namespace API.Controllers
     public class MediaController : ControllerBase
     {
         private readonly IWebHostEnvironment _webHostEnvironment;
-        private readonly IHttpContextAccessor _contextAccessor;
         private readonly IMediaRepository _context;
 
-        public MediaController(IWebHostEnvironment webHostEnvironment,IMediaRepository context, IHttpContextAccessor contextAccessor)
+        public MediaController(IWebHostEnvironment webHostEnvironment, IMediaRepository context)
         {
             _webHostEnvironment = webHostEnvironment;
             _context = context;
-            _contextAccessor = contextAccessor;
 
         }
         [HttpPost]
@@ -28,12 +26,12 @@ namespace API.Controllers
             string[] extentions = { ".jpg", ".png" };
             int uploaded = 0;
             int notUploaded = 0;
-            
+
 
             try
             {
                 var _uploadedFiles = Request.Form.Files;
-                foreach(IFormFile file in _uploadedFiles)
+                foreach (IFormFile file in _uploadedFiles)
                 {
 
                     string fileExtention = Path.GetExtension(file.FileName);
@@ -46,14 +44,14 @@ namespace API.Controllers
                     string randomFileName = RandomSerial.GenerateFileName(15);
                     string fileName = string.Format("{0}{1}", randomFileName, fileExtention);
 
-                    string filePath = string.Format("{0}\\Uploads\\Products\\{1}",_webHostEnvironment.WebRootPath,fileName);
+                    string filePath = string.Format("{0}\\Uploads\\Products\\{1}", _webHostEnvironment.WebRootPath, fileName);
 
                     bool condition = true;
 
                     while (condition)
                     {
 
-                        if(System.IO.File.Exists(filePath))
+                        if (System.IO.File.Exists(filePath))
                         {
                             randomFileName = RandomSerial.GenerateFileName(15);
                             fileName = string.Format("{0}{1}", randomFileName, fileExtention);
@@ -65,7 +63,7 @@ namespace API.Controllers
                             condition = false;
                         }
                     }
-                    
+
 
                     using (FileStream stream = System.IO.File.Create(filePath))
                     {
@@ -73,7 +71,8 @@ namespace API.Controllers
                         uploaded++;
                     }
                 }
-            }catch (Exception ex)
+            }
+            catch (Exception ex)
             {
                 return BadRequest(ex.Message.ToString());
             }
@@ -119,7 +118,7 @@ namespace API.Controllers
                 {
                     await file.CopyToAsync(stream);
                 }
-                
+
 
                 Media media = new Media
                 {
@@ -130,12 +129,141 @@ namespace API.Controllers
                 if (result != null)
                     return Ok("Uploaded Successfully");
                 else return BadRequest("Not uploaded!");
-            }catch(Exception ex)
+            }
+            catch (Exception ex)
             {
                 return BadRequest(ex.Message.ToString());
             }
 
         }
 
+        [HttpPost]
+        [Route("UploadStoreImage")]
+        public async Task<ActionResult> upload([FromForm] Store_Branch_MediaModel model)
+        {
+            try
+            {
+
+
+                string[] allowedExtentions = { ".jpg", ".png" };
+                string fileExtention = Path.GetExtension(model.File.FileName);
+
+                if (!allowedExtentions.Contains(fileExtention.ToLower()))
+                {
+                    return BadRequest("Not allowed Extentions");
+                }
+
+
+                // check if stores directory exists
+                string pathBuilder = $"{_webHostEnvironment.WebRootPath}\\Uploads\\Stores";
+                if (!Directory.Exists(pathBuilder))
+                    Directory.CreateDirectory(pathBuilder);
+
+                // check if store directory exists
+                pathBuilder = $"{pathBuilder}\\{model.StoreName}";
+                if (!Directory.Exists(pathBuilder))
+                    Directory.CreateDirectory(pathBuilder);
+
+                string imageName = $"{RandomSerial.GenerateFileName(15)}{fileExtention}";
+
+
+                bool condition = true;
+                while (condition)
+                {
+                    if (System.IO.File.Exists($"{pathBuilder}\\{imageName}"))
+                    {
+                        imageName = $"{RandomSerial.GenerateFileName(15)}{fileExtention}";
+                    }
+                    else
+                    {
+                        condition = false;
+                    }
+                }
+
+                using (FileStream stream = System.IO.File.Create($"{pathBuilder}\\{imageName}"))
+                {
+                    await model.File.CopyToAsync(stream);
+                }
+
+                Media media = new Media
+                {
+                    StoreId = model.Id,
+                    URL = $"Uploads\\Stores\\{model.StoreName}\\{imageName}"
+                };
+
+                Media result =await _context.Add(media);
+                if (result != null)
+                    return Ok("Uploaded Successfully");
+                else return BadRequest("Not uploaded!");
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+
+
+        }
+
+        [HttpPost]
+        [Route("uploadBranchImage")]
+        public async Task<ActionResult> uploadBranchImage([FromForm]Store_Branch_MediaModel model)
+        {
+            try
+            {
+
+                string[] allowedExtentions = { ".jpg", ".png" };
+                string fileExtention = Path.GetExtension(model.File.FileName);
+
+                if (!allowedExtentions.Contains(fileExtention.ToLower()))
+                    return BadRequest("file must be in .jpg or .png extention");
+
+                string imageUrl = $"Uploads\\Stores\\{model.StoreName}";
+                string pathBuilder = $"{_webHostEnvironment.WebRootPath}\\{imageUrl}";
+
+                if (!System.IO.Directory.Exists(pathBuilder))
+                    System.IO.Directory.CreateDirectory(pathBuilder);
+
+                string imageName = $"{RandomSerial.GenerateFileName(15)}{fileExtention}";
+
+                bool condetion = true;
+
+                while (condetion)
+                {
+                    if (System.IO.File.Exists($"{pathBuilder}\\{imageName}"))
+                        imageName = $"{RandomSerial.GenerateFileName(15)}{fileExtention}";
+                    else
+                        condetion = false;
+                }
+
+                using (FileStream stream = System.IO.File.Create($"{pathBuilder}\\{imageName}"))
+                {
+                    await model.File.CopyToAsync(stream);
+                }
+                Media media = new Media
+                {
+                    BranchId = model.Id,
+                    URL = $"{imageUrl}\\{imageName}"
+                };
+                Media createdMedia = await _context.Add(media);
+                if (createdMedia != null)
+                    return Ok("Uploaded Successfully");
+                else return BadRequest("Not uploaded!");
+            }
+            catch(Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+
+        }
+           
+
+    }
+
+
+    public class Store_Branch_MediaModel
+    {
+        public Guid Id { get; set; }
+        public string StoreName { get; set; }
+        public IFormFile File { get; set; }
     }
 }

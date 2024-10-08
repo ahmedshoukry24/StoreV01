@@ -30,6 +30,7 @@ namespace Infrastructure.Data.Configurations
             builder.Property(m=>m.Model).HasMaxLength(100);
             builder.Property(m=>m.SpecialFeatures).HasMaxLength(200);
             builder.Property(m=>m.GraphicsDescription).HasMaxLength(50);
+            builder.HasIndex(x=>x.Serial).IsUnique();
         }
     }
 }

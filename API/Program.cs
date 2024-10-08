@@ -1,18 +1,20 @@
 using API.Helper;
+using API.Middlewares;
 using Core.Entities.User;
 using Core.Interfaces;
 using Infrastructure.Data;
 using Infrastructure.Repository;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using System.Security.Claims;
+using System.Text.Json;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
@@ -70,6 +72,24 @@ builder.Services.AddAuthentication(
                 //RoleClaimType = ClaimTypes.Role
 
             };
+            //options.Events = new JwtBearerEvents
+            //{
+            //    OnChallenge = context =>
+            //    {
+            //        context.HandleResponse(); // Prevent default behavior
+
+            //        // Customize the response
+            //        context.Response.StatusCode = StatusCodes.Status401Unauthorized;
+            //        context.Response.ContentType = "application/json";
+            //        var result = JsonSerializer.Serialize(new
+            //        {
+            //            Status = false,
+            //            Message = "Unauthorized: You need to be a Vendor to access this resource."
+            //        });
+
+            //        return context.Response.WriteAsync(result);
+            //    }
+            //};
         });
 
 
@@ -99,6 +119,7 @@ builder.Services.AddCors(options =>
         policyBuilder.WithOrigins("http://localhost:3000");
         policyBuilder.AllowAnyHeader();
         policyBuilder.AllowAnyMethod();
+        policyBuilder.AllowCredentials();
     });
     // if I have more clients I should add them downhere
 
@@ -108,12 +129,16 @@ builder.Services.AddCors(options =>
 
 var app = builder.Build();
 
+
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
+    app.UseDeveloperExceptionPage();
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+//app.UseErrorHandling();
 
 app.UseHttpsRedirection();
 
@@ -125,7 +150,10 @@ app.UseAuthorization();
 
 app.UseStaticFiles();
 
+
 app.MapControllers();
+
+app.UseMiddleware<ProfilingMiddleware>();
 
 using(var scope = app.Services.CreateScope())
 {
