@@ -13,10 +13,11 @@ namespace Core.Entities
         public string Name { get; set; }
         public string Description { get; set; }
         public DateTime CreatedDate { get; set; }
-        public DateTime ModifiedDate { get; set; }
+        public DateTime? ModifiedDate { get; set; }
         public bool IsActive { get; set; }
-        //public decimal Price { get; set; }
-        //public int StockQuantity { get; set; }
+        public bool IsDelete { get; set; }
+        public decimal Price { get; set; }
+        public int StockQuantity { get; set; }
         public string Serial { get; set; }
 
 
@@ -27,11 +28,10 @@ namespace Core.Entities
         public List<Variation> Variations { get; set; }
 
         #region one products exists in many branches
-       public List<BranchProducts> BranchesProducts { get; set; }
+        //public List<BranchProducts> BranchesProducts { get; set; }
 
-        //public Branch Branch { get; set; }
-        ////[ForeignKey("Branch")]
-        //public Guid BranchId { get; set; }
+        public Branch Branch { get; set; }
+        public Guid BranchId { get; set; }
 
         #endregion
 

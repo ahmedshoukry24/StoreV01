@@ -22,8 +22,8 @@ namespace Infrastructure.Data.Configurations
             builder.Property<string>(s => s.Serial).HasMaxLength(15);
             builder.HasIndex(x => x.Serial).IsUnique();
 
-            //builder.HasMany(x => x.Products).WithOne(y => y.Branch).HasForeignKey(c=>c.BranchId);
-            builder.HasMany(x => x.Variations).WithOne(x => x.Branch).HasForeignKey(x => x.BranchId);
+            //builder.HasMany(x => x.Products).WithOne(y => y.Branch).HasForeignKey(c => c.BranchId);
+            //builder.HasMany(x => x.Variations).WithOne(x => x.Branch).HasForeignKey(x => x.BranchId);
 
             builder.ToTable("Branches");
         }

@@ -35,8 +35,8 @@ namespace Core.Entities
         public Guid ProductId { get; set; }
         public Product Product { get; set; }
 
-        public Branch Branch { get; set; }
-        public Guid BranchId { get; set; }
+        //public Branch Branch { get; set; }
+        //public Guid BranchId { get; set; }
 
         public ICollection<CartVariation> CartVariations { get; set; }
 

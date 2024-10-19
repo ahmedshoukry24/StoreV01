@@ -25,7 +25,7 @@ namespace API.Controllers
 
         [HttpPost]
         [Route("Create")]
-        [Authorize(Roles = "Vendor")]
+        //[Authorize(Roles = "Vendor")]
         public async Task<ActionResult<StoreResponse>> CreateStore(StoreDto storeDto)
         {
 
@@ -37,9 +37,14 @@ namespace API.Controllers
                 return BadRequest(StoreResponse.ErrorResponse(errorMessage));
             }
             //var userId = User.FindFirst(ClaimTypes.NameIdentifier).Value;
-            string? userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-            if (userId != storeDto.VendorId)
-                return Unauthorized(StoreResponse.ErrorResponse("Something wrong with user authorization!"));
+            
+            
+            //string? userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            //if (userId != storeDto.VendorId)
+            //    return Unauthorized(StoreResponse.ErrorResponse("Something wrong with user authorization!"));
+
+
+
             //StoreResponse.ErrorResponse("Something wrong with user authorization!")
 
             Store store = _mapper.Map<Store>(storeDto);
@@ -58,7 +63,7 @@ namespace API.Controllers
 
         [HttpGet]
         [Route("Stores")]
-        [Authorize(Roles ="Vendor")]
+        //[Authorize(Roles ="Vendor")]
         public async Task<ActionResult<IEnumerable<Store>>> GetAll()
         {
             List<StoreDto> stores = _mapper.Map<List<StoreDto>>(await this._context.GetAll());

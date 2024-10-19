@@ -31,10 +31,10 @@ namespace API.Controllers
             if(!ModelState.IsValid)
                 return BadRequest(ModelState);
 
-            productDto.Serial = RandomSerial.GenerateSerial(10);
+
             Product product = this._mapper.Map<Product>(productDto);
             Product res =  await this._context.Add(product);
-            if (res != null)
+            if (res == null)
                 return BadRequest("Something went wrong!");
             else
                 return Ok("Product Added!");

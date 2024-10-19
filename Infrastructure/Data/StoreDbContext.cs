@@ -32,6 +32,10 @@ namespace Infrastructure.Data
             modelBuilder.Entity<User>().UseTptMappingStrategy();
         }
         #region DbSets
+        public DbSet<Customer> Customers { get; set; }
+        public DbSet<Vendor> Vendors { get; set; }
+        public DbSet<Employee> Employees { get; set; }
+
         public DbSet<Product> Products { get; set; }
         public DbSet<Variation> Variations { get; set; }
         public DbSet<Branch> Branches { get; set; }
@@ -39,9 +43,8 @@ namespace Infrastructure.Data
         public DbSet<Cart> Carts { get; set; }
         public DbSet<CartVariation> CartsVariation { get; set; }
         public DbSet<Category> Categories { get; set; }
-        public DbSet<Customer> Customers { get; set; }
-        public DbSet<Vendor> Vendors { get; set; }
-        public DbSet<Employee> Employees { get; set; }
+        public DbSet<Media> Medias { get; set; }
+       
         #endregion
 
     }

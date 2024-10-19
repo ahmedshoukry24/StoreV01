@@ -4,6 +4,7 @@ using Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Infrastructure.Data.Migrations
 {
     [DbContext(typeof(StoreDbContext))]
-    partial class StoreDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241008150256_FixRelationships_between_branch_product")]
+    partial class FixRelationships_between_branch_product
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -190,10 +193,7 @@ namespace Infrastructure.Data.Migrations
                     b.Property<bool>("IsActive")
                         .HasColumnType("bit");
 
-                    b.Property<bool>("IsDelete")
-                        .HasColumnType("bit");
-
-                    b.Property<DateTime?>("ModifiedDate")
+                    b.Property<DateTime>("ModifiedDate")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Name")

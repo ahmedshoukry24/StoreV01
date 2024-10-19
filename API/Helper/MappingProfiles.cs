@@ -55,7 +55,14 @@ namespace API.Helper
             CreateMap<Category, CategoryDto>();
             // Products & Variations
             CreateMap<ProductDto, Product>();
-            CreateMap<Product, ProductDto>();
+            CreateMap<Product, ProductDto>().BeforeMap((s,d) =>
+            {
+                s.Serial = RandomSerial.GenerateSerial(15);
+                s.ModifiedDate = null;
+                s.IsActive = false;
+                s.IsDelete = false;
+            });
+
             CreateMap<VariationDto, Variation>();
             CreateMap<Variation, VariationDto>();
 
