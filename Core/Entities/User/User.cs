@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 
 namespace Core.Entities.User
 {
-    public class User : IdentityUser
+    public class User : IdentityUser<Guid>
     {
         //public string Discriminator { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
-
+        public string VisiblePassword { get; set; }
 
         //// navigation props
         //public Employee Employee { get; set; }

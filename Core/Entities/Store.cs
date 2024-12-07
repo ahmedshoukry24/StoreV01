@@ -27,7 +27,7 @@ namespace Core.Entities
 
         // Navigation Properties
         public List<Branch> Branches { get; set; }
-        public string VendorId { get; set; }
+        public Guid VendorId { get; set; }
         public Vendor  Vendor { get; set; }
 
 

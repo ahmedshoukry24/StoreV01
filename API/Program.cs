@@ -1,6 +1,7 @@
 using API.Helper;
 using API.Middlewares;
 using Core.Entities.User;
+using Core.Entities.User.UserDetails;
 using Core.Interfaces;
 using Infrastructure.Data;
 using Infrastructure.Repository;
@@ -22,25 +23,28 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddAutoMapper(typeof(MappingProfiles));
 
-builder.Services.AddScoped(typeof(IBaseRepository<>),typeof(BaseRepository<>));
+#region TOBEREPLACED
+builder.Services.AddScoped(typeof(IBaseRepository<>), typeof(BaseRepository<>));
 builder.Services.AddScoped<IStoreRepository, StoreRepository>();
 builder.Services.AddScoped<IBranchRepository, BranchRepository>();
 builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
 builder.Services.AddScoped<IVariationRepository, VariationRepository>();
-builder.Services.AddScoped<IMediaRepository,MediaRepository>();
+builder.Services.AddScoped<IMediaRepository, MediaRepository>();
+#endregion
+
 
 builder.Services.AddDbContext<StoreDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnectionString")));
 
 
 
-builder.Services.AddIdentity<User, IdentityRole>(
+builder.Services.AddIdentity<User, Role>(
     opt =>
     {
         opt.Password.RequireNonAlphanumeric = false;
         opt.Password.RequiredLength = 8;
 
-    }).AddRoles<IdentityRole>()
+    }).AddRoles<Role>()
     .AddEntityFrameworkStores<StoreDbContext>();
 
 //builder.Services.Configure<IdentityOptions>(opt =>

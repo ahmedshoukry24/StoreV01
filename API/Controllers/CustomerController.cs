@@ -75,12 +75,12 @@ namespace API.Controllers
             await _userManager.AddClaimsAsync(customer,new List<Claim>
             {
                 new Claim(ClaimTypes.Role,"Customer"),
-                new Claim(ClaimTypes.NameIdentifier, customer.Id)
+                new Claim(ClaimTypes.NameIdentifier,customer.Id.ToString())
             });
 
             await _userManager.AddToRoleAsync(customer, "Customer");
 
-            Object tokenObject = await TokenHelper.CreateTokenObject(customer, _configuration, _userManager,customer.Id);
+            Object tokenObject = await TokenHelper.CreateTokenObject(customer, _configuration, _userManager,customer.Id.ToString());
             return Ok(tokenObject);
 
 
@@ -112,7 +112,7 @@ namespace API.Controllers
             }
 
 
-            Object tokenObject = await TokenHelper.CreateTokenObject(customer, _configuration, _userManager, customer.Id);
+            Object tokenObject = await TokenHelper.CreateTokenObject(customer, _configuration, _userManager, customer.Id.ToString());
             return Ok(tokenObject);
         }
 

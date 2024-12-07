@@ -16,6 +16,7 @@
           "Microsoft.EntityFrameworkCore.Design": "7.0.19",
           "Microsoft.EntityFrameworkCore.Tools": "7.0.19",
           "Newtonsoft.Json": "13.0.3",
+          "Service": "1.0.0",
           "Swashbuckle.AspNetCore": "6.4.0"
         },
         "runtime": {
@@ -763,6 +764,14 @@
         "runtime": {
           "Infrastructure.dll": {}
         }
+      },
+      "Service/1.0.0": {
+        "dependencies": {
+          "Core": "1.0.0"
+        },
+        "runtime": {
+          "Service.dll": {}
+        }
       }
     }
   },
@@ -1331,6 +1340,11 @@
       "sha512": ""
     },
     "Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Service/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

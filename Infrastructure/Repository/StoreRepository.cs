@@ -23,7 +23,7 @@ namespace Infrastructure.Repository
         {
             return await _dbContext.Stores.ToListAsync();
         }
-        public async Task<IEnumerable<Store>> GetAll(string id)
+        public async Task<IEnumerable<Store>> GetAll(Guid id)
         {
             return await _dbContext.Stores.Include(x=>x.Media).Where(x=>x.VendorId == id).ToListAsync();
         }

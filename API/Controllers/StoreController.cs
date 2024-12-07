@@ -73,10 +73,10 @@ namespace API.Controllers
         [HttpGet]
         [Route("Stores/{id}")]
         [Authorize(Roles ="Vendor")]
-        public async Task<ActionResult<IEnumerable<Store>>> GetAll(string id)
+        public async Task<ActionResult<IEnumerable<Store>>> GetAll(Guid id)
         {
             var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-            if(userId == id)
+            if(userId == id.ToString())
             {
                 List<StoreDto> stores = _mapper.Map<List<StoreDto>>(await this._context.GetAll(id));
                 if (stores == null)
@@ -120,7 +120,7 @@ namespace API.Controllers
 
             string? vendorId = User.FindFirstValue(ClaimTypes.NameIdentifier);
 
-            if (existingStore.VendorId != vendorId)
+            if (existingStore.VendorId.ToString() != vendorId)
                 return Forbid("Unautorized vendor!");
 
             UpdateEntitiesHelper.UpdateStore(existingStore, storeDto);
@@ -143,7 +143,7 @@ namespace API.Controllers
 
             string? vendorId = User.FindFirstValue(ClaimTypes.NameIdentifier);
 
-            if (store?.VendorId != vendorId)
+            if (store?.VendorId.ToString() != vendorId)
                 return Forbid("Unautorized vendor!");
 
             await this._context.Delete(store);

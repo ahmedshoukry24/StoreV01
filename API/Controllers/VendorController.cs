@@ -80,13 +80,13 @@ namespace API.Controllers
 
             await _userManager.AddClaimsAsync(user, new List<Claim> {
                 new Claim(ClaimTypes.Role,"Vendor"),
-                new Claim(ClaimTypes.NameIdentifier,user.Id)
+                new Claim(ClaimTypes.NameIdentifier,user.Id.ToString())
             });
 
             await _userManager.AddToRoleAsync(user, "Vendor");
 
 
-            AuthResponseDto tokenObject = await TokenHelper.CreateTokenObject(user, _configuration, _userManager, user.Id);
+            AuthResponseDto tokenObject = await TokenHelper.CreateTokenObject(user, _configuration, _userManager, user.Id.ToString());
             return Ok(tokenObject);
 
         }
@@ -111,7 +111,7 @@ namespace API.Controllers
                 return BadRequest(AuthResponseDto.ErrorResponse("Email is already registered with another role, contact us if you want to be a vendor!"));
             
 
-            AuthResponseDto _authResponseDto = await TokenHelper.CreateTokenObject(vendor, _configuration, _userManager,vendor.Id);
+            AuthResponseDto _authResponseDto = await TokenHelper.CreateTokenObject(vendor, _configuration, _userManager,vendor.Id.ToString());
             return Ok(_authResponseDto);
         }
     }

@@ -30,7 +30,6 @@ namespace API.Helper
                 claims: claims,
                 signingCredentials: signinCredentials,
                 expires: dateTime
-
                 ) ;
 
             return new JwtSecurityTokenHandler().WriteToken(jwtToken) ;

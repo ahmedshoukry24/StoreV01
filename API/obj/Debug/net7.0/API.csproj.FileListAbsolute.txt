@@ -266,3 +266,5 @@ D:\Projects\StoreV01\API\bin\Debug\net7.0\API.staticwebassets.runtime.json
 D:\Projects\StoreV01\API\bin\Debug\net7.0\Microsoft.AspNetCore.Identity.UI.dll
 D:\Projects\StoreV01\API\bin\Debug\net7.0\Microsoft.Extensions.FileProviders.Embedded.dll
 D:\Projects\StoreV01\API\bin\Debug\net7.0\Newtonsoft.Json.dll
+D:\Projects\StoreV01\API\bin\Debug\net7.0\Service.dll
+D:\Projects\StoreV01\API\bin\Debug\net7.0\Service.pdb

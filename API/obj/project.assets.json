@@ -1410,6 +1410,19 @@
         "runtime": {
           "bin/placeholder/Infrastructure.dll": {}
         }
+      },
+      "Service/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Core": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Service.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Service.dll": {}
+        }
       }
     }
   },
@@ -3960,6 +3973,11 @@
       "type": "project",
       "path": "../Infrastructure/Infrastructure.csproj",
       "msbuildProject": "../Infrastructure/Infrastructure.csproj"
+    },
+    "Service/1.0.0": {
+      "type": "project",
+      "path": "../Service/Service.csproj",
+      "msbuildProject": "../Service/Service.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -3972,6 +3990,7 @@
       "Microsoft.EntityFrameworkCore.Design >= 7.0.19",
       "Microsoft.EntityFrameworkCore.Tools >= 7.0.19",
       "Newtonsoft.Json >= 13.0.3",
+      "Service >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.4.0"
     ]
   },
@@ -4004,6 +4023,9 @@
           "projectReferences": {
             "D:\\Projects\\StoreV01\\Infrastructure\\Infrastructure.csproj": {
               "projectPath": "D:\\Projects\\StoreV01\\Infrastructure\\Infrastructure.csproj"
+            },
+            "D:\\Projects\\StoreV01\\Service\\Service.csproj": {
+              "projectPath": "D:\\Projects\\StoreV01\\Service\\Service.csproj"
             }
           }
         }

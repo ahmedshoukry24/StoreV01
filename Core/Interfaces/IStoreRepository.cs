@@ -10,7 +10,7 @@ namespace Core.Interfaces
     public interface IStoreRepository : IBaseRepository<Store>
     {
         Task<IEnumerable<Store>> GetAll();
-        Task<IEnumerable<Store>> GetAll(string id);
+        Task<IEnumerable<Store>> GetAll(Guid id);
         Task<IEnumerable<Store>> GetAllWithBranches();
     }
 }
